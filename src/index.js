@@ -1,3 +1,11 @@
-import './index.scss';
+import './../styles/index.scss';
 
-console.log('Hello World');
+function component() {
+    let element = document.createElement('div');
+
+    element.innerHTML = ['Hello', 'webpack'].join(' ');
+
+    return element;
+}
+
+document.body.appendChild(component());
