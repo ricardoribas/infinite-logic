@@ -2,6 +2,12 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+	resolve: {
+		alias: {
+			src: path.resolve(__dirname, 'src'),
+			fixtures: path.resolve(__dirname, 'resources')
+		}
+	},
 	module: {
 		rules: [
 			{
