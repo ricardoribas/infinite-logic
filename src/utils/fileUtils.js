@@ -2,12 +2,12 @@
 const fs = require('fs');
 
 const getResourcesDirectory = (path) => {
-    const resourcesDirectory = `${__dirname}/../resources/`;
+    const resourcesDirectory = `${__dirname}/../../resources/`;
 
     return `${resourcesDirectory}${path}`;
 };
 
-const getFileContents = (resourcePath, callback) => {
+const getFileContents = (resourcePath) => {
     return new Promise((resolve, reject) => {
         fs.readFile(getResourcesDirectory(resourcePath), 'utf8', function (error, data) {
             if (error) {
