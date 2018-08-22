@@ -6,4 +6,8 @@ require('babel-register')({
 	]
 });
 
+var a = 1;
+
+a = 2;
+
 require('./index');
