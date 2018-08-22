@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const outputDirectory = 'dist';
 
 module.exports = {
 	resolve: {
@@ -8,6 +11,11 @@ module.exports = {
 			src: path.resolve(__dirname, 'src'),
 			fixtures: path.resolve(__dirname, 'resources')
 		}
+	},
+	entry: './src/client/index.js',
+	output: {
+		path: path.join(__dirname, outputDirectory),
+		filename: 'bundle.js'
 	},
 	module: {
 		rules: [
@@ -40,10 +48,22 @@ module.exports = {
 						loader: 'sass-loader'
 					}
 				]
+			},
+			{
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+				loader: "url-loader?limit=100000"
 			}
 		]
 	},
+	devServer: {
+		port: 3000,
+		open: true,
+		proxy: {
+			'/api': 'http://localhost:8080'
+		}
+	},
 	plugins: [
+		new CleanWebpackPlugin([outputDirectory]),
 		new HtmlWebPackPlugin({
 			template: './src/index.html',
 			filename: './index.html'
