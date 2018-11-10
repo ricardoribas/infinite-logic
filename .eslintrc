@@ -10,6 +10,9 @@
     "rules": {
         "no-console": "off",
         "comma-dangle": "off",
+        "no-tabs": "off",
+        "react/jsx-indent": "off",
+        "import/no-unresolved": "off",
         "react/jsx-filename-extension": "off"
     }
 }

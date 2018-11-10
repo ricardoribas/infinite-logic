@@ -9,6 +9,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, 'src'),
+			styles: path.resolve(__dirname, 'styles'),
 			fixtures: path.resolve(__dirname, 'resources')
 		}
 	},
@@ -23,7 +24,7 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader: "babel-loader"
+					loader: 'babel-loader'
 				}
 			},
 			{
@@ -51,15 +52,13 @@ module.exports = {
 			},
 			{
 				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-				loader: "url-loader?limit=100000"
+				loader: 'url-loader?limit=100000'
 			}
 		]
 	},
 	devServer: {
-		port: 3000,
-		open: true,
 		proxy: {
-			'/api': 'http://localhost:8080'
+			'/api': 'http://localhost:8000'
 		}
 	},
 	plugins: [
