@@ -12,7 +12,7 @@ module.exports = {
 			fixtures: path.resolve(__dirname, 'resources')
 		}
 	},
-	entry: './src/client/index.js',
+	entry: 'src/client/index.js',
 	output: {
 		path: path.join(__dirname, outputDirectory),
 		filename: 'bundle.js'
@@ -65,8 +65,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin([outputDirectory]),
 		new HtmlWebPackPlugin({
-			template: './src/index.html',
-			filename: './index.html'
+			template: './public/index.html'
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
