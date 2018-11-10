@@ -13,6 +13,7 @@
         "no-tabs": "off",
         "react/jsx-indent": "off",
         "import/no-unresolved": "off",
+        "import/no-extraneous-dependencies": "off",
         "react/jsx-filename-extension": "off"
     }
 }
