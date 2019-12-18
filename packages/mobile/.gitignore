@@ -20,11 +20,9 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-xcshareddata
 
 # Android/IntelliJ
 #
-android/app/release
 build/
 .idea
 .gradle
