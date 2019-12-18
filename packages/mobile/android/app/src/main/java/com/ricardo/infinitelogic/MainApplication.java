@@ -1,4 +1,4 @@
-package com.inifinitelogic;
+package com.ricardo.infinitelogic;
 
 import android.app.Application;
 import android.content.Context;

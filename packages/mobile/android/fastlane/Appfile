@@ -1,0 +1,2 @@
+json_key_file("fastlane/api-google.json")
+package_name("com.ricardo.infinitelogic")
