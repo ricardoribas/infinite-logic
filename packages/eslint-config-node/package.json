@@ -1,0 +1,12 @@
+{
+  "name": "@infinite/eslint-config-node",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
