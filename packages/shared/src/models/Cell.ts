@@ -2,11 +2,11 @@ import CellState from '../enums/CellState';
 
 export default class Cell {
   constructor(
-    protected _value: Number,
+    protected _value: number,
     protected _state: CellState = CellState.NONE
   ) {}
 
-  get state() {
+  get state(): CellState {
     return this._state;
   }
 
@@ -14,11 +14,11 @@ export default class Cell {
     this._state = newState;
   }
 
-  get value() {
+  get value(): number {
     return this._value;
   }
 
-  toString(): String {
+  toString(): string {
     throw new Error('Not Implemented');
   }
 }

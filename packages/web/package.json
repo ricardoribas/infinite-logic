@@ -24,7 +24,7 @@
     "pretest": "npm run compile",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-app-rewired eject",
-    "lint": "eslint *.js ."
+    "lint": "eslint \"src/**\""
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,7 +1,7 @@
 import Cell from './Cell';
 
 export default class KyudokuCell extends Cell {
-  toString(): String {
+  toString(): string {
     return String(this.value);
   }
 }

@@ -1,3 +1,3 @@
 export default class AbstractLogger {
-    constructor(protected name: String) {}
+  constructor(protected name: string) {}
 }

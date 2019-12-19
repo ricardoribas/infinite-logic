@@ -1,11 +1,14 @@
-import ILogger from '../ILogger';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-console */
+import Logger from '../Logger';
 import AbstractLogger from '../AbstractLogger';
 
-function getLoggerPrefix(name: String) : String {
+function getLoggerPrefix(name: string): string {
   return `[${name}]`;
 }
 
-export default class DevelopmentLogger extends AbstractLogger implements ILogger {
+export default class DevelopmentLogger extends AbstractLogger
+  implements Logger {
   info(...args: any[]): void {
     console.info(getLoggerPrefix(this.name), ...args);
   }
