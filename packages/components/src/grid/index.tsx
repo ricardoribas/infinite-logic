@@ -1,10 +1,16 @@
-import React, { ReactNode } from 'react';
-import { View, ViewPropTypes } from 'react-native';
-import PropTypes, { InferProps, ReactNodeArray } from 'prop-types';
+import React, { FunctionComponent, ReactNodeArray } from 'react';
+import { View, ViewStyle } from 'react-native';
 
 import Row from './Row';
 import Column from './Column';
 import { GRID as GRID_STYLES, GRID_ROWS } from './Styles';
+
+type Props = {
+  rows: number;
+  columns: number;
+  renderCell: Function;
+  style: ViewStyle | ViewStyle[];
+};
 
 function renderRow(
   row: number,
@@ -56,24 +62,15 @@ function renderGrid(
   return rows;
 }
 
-function Grid({
+const Grid: FunctionComponent<Props> = ({
   rows,
   columns,
   renderCell,
   style
-}: InferProps<typeof Grid.propTypes>): ReactNode {
-  return (
-    <View style={[GRID_STYLES, style]}>
-      {renderGrid(rows, columns, renderCell)}
-    </View>
-  );
-}
-
-Grid.propTypes = {
-  rows: PropTypes.number.isRequired,
-  columns: PropTypes.number.isRequired,
-  renderCell: PropTypes.func.isRequired,
-  style: ViewPropTypes.style
-};
+}: Props) => (
+  <View style={[GRID_STYLES, style]}>
+    {renderGrid(rows, columns, renderCell)}
+  </View>
+);
 
 export default Grid;

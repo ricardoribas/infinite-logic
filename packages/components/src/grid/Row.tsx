@@ -1,16 +1,13 @@
-import React, { ReactNode } from 'react';
-import { View, ViewPropTypes } from 'react-native';
-import { InferProps } from 'prop-types';
+import React, { FunctionComponent, ReactNodeArray, ReactNode } from 'react';
+import { View, ViewStyle } from 'react-native';
 
-import { CHILDREN_PROPS } from '../props';
-
-function Row({ children, style }: InferProps<typeof Row.propTypes>): ReactNode {
-  return <View style={style}>{children}</View>;
-}
-
-Row.propTypes = {
-  ...CHILDREN_PROPS,
-  style: ViewPropTypes.style
+type Props = {
+  children: ReactNode | ReactNodeArray;
+  style: ViewStyle | ViewStyle[];
 };
+
+const Row: FunctionComponent<Props> = ({ children, style }: Props) => (
+  <View style={style}>{children}</View>
+);
 
 export default Row;
