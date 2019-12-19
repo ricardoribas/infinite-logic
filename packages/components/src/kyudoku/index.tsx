@@ -1,6 +1,5 @@
-import React, { useState, ReactNode } from 'react';
-import { Text, View, ViewPropTypes, TouchableOpacity } from 'react-native';
-import PropTypes, { InferProps } from 'prop-types';
+import React, { useState, ReactNode, FunctionComponent } from 'react';
+import { Text, View, ViewStyle, TouchableOpacity } from 'react-native';
 
 import Puzzle from '@infinite/shared/src/models/Puzzle';
 import Grid from './../grid';
@@ -10,10 +9,12 @@ import { getNextState } from '@infinite/shared/src/utils/KyudokuCell';
 import Cell from '@infinite/shared/src/models/Cell';
 import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
 
-function KyudokuGrid({
-  puzzle,
-  style
-}: InferProps<typeof KyudokuGrid.propTypes>): ReactNode {
+type Props = {
+  puzzle: Puzzle;
+  style: ViewStyle | ViewStyle[];
+};
+
+const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
   const nRows = puzzle.cells.length;
   const nColumns = puzzle.cells[0].length;
   const [board, setPuzzle] = useState(puzzle);
@@ -63,11 +64,6 @@ function KyudokuGrid({
       }}
     />
   );
-}
-
-KyudokuGrid.propTypes = {
-  puzzle: PropTypes.instanceOf(Puzzle).isRequired,
-  style: ViewPropTypes.style
 };
 
 export default KyudokuGrid;

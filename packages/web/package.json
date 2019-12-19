@@ -1,6 +1,6 @@
 {
-  "name": "web",
-  "version": "0.1.0",
+  "name": "@infinite/web",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -11,8 +11,8 @@
     "react-dom": "^16.12.0",
     "react-native-web": "^0.11.7",
     "react-scripts": "3.3.0",
-    "components": "0.0.1",
-    "shared": "0.0.1"
+    "@infinite/components": "1.0.0",
+    "@infinite/shared": "1.0.0"
   },
   "scripts": {
     "compile": "tsc -b",
@@ -23,7 +23,8 @@
     "build": "react-app-rewired build",
     "pretest": "npm run compile",
     "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "lint": "eslint *.js ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,7 +47,6 @@
     "concurrently": "5.0.0",
     "react-app-rewired": "2.1.4",
     "typescript": "3.6.4",
-    "tslint": "^5.20.1",
     "react-test-renderer": "16.12.0"
   }
 }

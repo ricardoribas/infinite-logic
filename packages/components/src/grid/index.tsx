@@ -8,7 +8,7 @@ import { GRID as GRID_STYLES, GRID_ROWS } from './Styles';
 type Props = {
   rows: number;
   columns: number;
-  renderCell: Function;
+  renderCell: (row: number, column: number) => void;
   style: ViewStyle | ViewStyle[];
 };
 
