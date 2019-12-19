@@ -3,7 +3,7 @@ import { View, ViewStyle } from 'react-native';
 
 type Props = {
   children: ReactNode | ReactNodeArray;
-  style: ViewStyle | ViewStyle[];
+  style?: ViewStyle | ViewStyle[];
 };
 
 const Column: FunctionComponent<Props> = ({ children, style }: Props) => (

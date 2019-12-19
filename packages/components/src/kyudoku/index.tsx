@@ -2,12 +2,12 @@ import React, { useState, ReactNode, FunctionComponent } from 'react';
 import { Text, View, ViewStyle, TouchableOpacity } from 'react-native';
 
 import Puzzle from '@infinite/shared/src/models/Puzzle';
-import Grid from './../grid';
-
 import { isDisabled } from '@infinite/shared/src/utils/Cell';
 import { getNextState } from '@infinite/shared/src/utils/KyudokuCell';
 import Cell from '@infinite/shared/src/models/Cell';
 import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
+
+import Grid from 'grid';
 
 type Props = {
   puzzle: Puzzle;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Column Component Render with some children 1`] = `
+<View>
+  <Text>
+    5
+  </Text>
+</View>
+`;
+
+exports[`Column Component Render with some styles and children 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "yellow",
+    }
+  }
+>
+  <Text>
+    child one
+  </Text>
+  <Text>
+    child two
+  </Text>
+</View>
+`;

@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "lint": "eslint \"src/**\""
+    "lint": "eslint \"src/**\"",
+    "test": "jest  --coverage --config jest.config.js",
+    "test:debug": "node --inspect-brk ../../node_modules/jest/bin/jest.js --runInBand --config jest.config.js"
   },
   "devDependencies": {
     "@infinite/eslint-config-node": "1.0.0",
-    "eslint-plugin-react": "^7.17.0"
+    "@types/react-test-renderer": "^16.9.1",
+    "eslint-plugin-react": "^7.17.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.4"
   },
   "peerDependencies": {
     "eslint-plugin-react": "^7.17.0"

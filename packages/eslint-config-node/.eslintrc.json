@@ -66,6 +66,7 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
+      "babel-module": {},
       "node": {
         "extensions": [".jsx", ".ts", ".tsx"]
       }

@@ -8,6 +8,10 @@
     "outDir": "dist",
     "rootDir": "src",
     "typeRoots": ["@types", "../../node_modules/@types"],
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "grid": ["grid/*"],
+      "constants": ["constants/*"]
+    }
   }
 }

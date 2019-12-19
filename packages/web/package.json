@@ -22,7 +22,7 @@
     "prebuild": "npm run compile",
     "build": "react-app-rewired build",
     "pretest": "npm run compile",
-    "test": "react-app-rewired test --env=jsdom",
+    "test": "CI=true react-app-rewired test --env=jsdom --passWithNoTests",
     "eject": "react-app-rewired eject",
     "lint": "eslint \"src/**\""
   },

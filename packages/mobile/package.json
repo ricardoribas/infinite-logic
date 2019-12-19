@@ -10,7 +10,8 @@
     "prestart": "npm run compile",
     "start": "concurrently \"npm run compile -- -w\" \"react-native start\"",
     "studio": "studio android",
-    "test": "jest",
+    "test": "jest  --coverage --config jest.config.js --passWithNoTests",
+    "test:debug": "node --inspect-brk ../../node_modules/jest/bin/jest.js --runInBand --config jest.config.js",
     "xcode": "open ios/myprojectname.xcworkspace"
   },
   "dependencies": {
