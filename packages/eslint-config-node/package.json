@@ -1,10 +1,15 @@
 {
   "name": "@infinite/eslint-config-node",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "private": true,
   "devDependencies": {
-    "eslint": "^6.7.2"
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "lint": "eslint ."

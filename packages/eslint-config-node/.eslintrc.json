@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "import/no-unresolved": 0,
+    "newline-before-return": "error",
+    "newline-after-var": "error",
+    "no-console": "error",
+    "comma-dangle": "off",
+    "no-plusplus": "off",
+    "no-template-curly-in-string": "off",
+    "no-trailing-spaces": "error",
+    "class-methods-use-this": "off",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-underscore-dangle": "off",
+    "linebreak-style": "off",
+    "func-names": "off",
+    "no-unused-expressions": "off",
+    "curly": "error",
+    "no-undef-init": "error"
+  },
+  "globals": {
+    "__DEV__": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

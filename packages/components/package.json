@@ -1,5 +1,15 @@
 {
-  "name": "components",
-  "version": "0.0.1",
-  "private": true
+  "name": "@infinite/components",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"src/**\""
+  },
+  "devDependencies": {
+    "@infinite/eslint-config-node": "1.0.0",
+    "eslint-plugin-react": "^7.17.0"
+  },
+  "peerDependencies": {
+    "eslint-plugin-react": "^7.17.0"
+  }
 }

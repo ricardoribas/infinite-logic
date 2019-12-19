@@ -7,8 +7,8 @@ import Column from './Column';
 import { GRID as GRID_STYLES, GRID_ROWS } from './Styles';
 
 function renderRow(
-  row: Number,
-  nColumns: Number,
+  row: number,
+  nColumns: number,
   renderCell: Function
 ): ReactNodeArray {
   const columns = [];
@@ -30,8 +30,8 @@ function renderRow(
 }
 
 function renderGrid(
-  nRows: Number,
-  nColumns: Number,
+  nRows: number,
+  nColumns: number,
   renderCell: Function
 ): ReactNodeArray {
   const rows = [];
@@ -61,7 +61,7 @@ function Grid({
   columns,
   renderCell,
   style
-}: InferProps<typeof Grid.propTypes>) {
+}: InferProps<typeof Grid.propTypes>): ReactNode {
   return (
     <View style={[GRID_STYLES, style]}>
       {renderGrid(rows, columns, renderCell)}

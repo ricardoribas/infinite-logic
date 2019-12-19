@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
+import React, { Component, ReactNode } from "react";
+import { View } from "react-native";
 
-import KyudokuCell from 'shared/src/models/KyudokuCell';
-import CellState from 'shared/src/enums/CellState';
-import KyudokuGrid from './grid/Kyudoku';
-import Puzzle from 'shared/src/models/Puzzle';
+import KyudokuCell from "@infinite/shared/src/models/KyudokuCell";
+import CellState from "@infinite/shared/src/enums/CellState";
+import Puzzle from "@infinite/shared/src/models/Puzzle";
+
+import KyudokuGrid from "./kyudoku";
 
 const KYUDOKU_PUZZLE = [
   [
@@ -58,14 +59,14 @@ const KYUDOKU_PUZZLE = [
 ];
 
 export default class App extends Component {
-  render() {
+  render(): ReactNode {
     return (
       <View
         style={{
           flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'red'
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "red"
         }}
       >
         <KyudokuGrid

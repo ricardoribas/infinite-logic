@@ -1,0 +1,30 @@
+{
+  "extends": ["@infinite/node"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "instance-variables",
+          "static-variables",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".tsx", ".ts"]
+      }
+    ],
+    "react/prop-types": "error"
+  }
+}

@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import { Text, View, ViewPropTypes, TouchableOpacity } from 'react-native';
 import PropTypes, { InferProps } from 'prop-types';
 
-import Puzzle from 'shared/src/models/Puzzle';
+import Puzzle from '@infinite/shared/src/models/Puzzle';
 import Grid from './../grid';
 
-import { isDisabled } from 'shared/src/utils/Cell';
-import { getNextState } from 'shared/src/utils/KyudokuCell';
-import Cell from 'shared/src/models/Cell';
-import KyudokuCellStyleFactory from 'shared/src/factories/cells/KyudokuCellStyle';
+import { isDisabled } from '@infinite/shared/src/utils/Cell';
+import { getNextState } from '@infinite/shared/src/utils/KyudokuCell';
+import Cell from '@infinite/shared/src/models/Cell';
+import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
 
 function KyudokuGrid({
   puzzle,
   style
-}: InferProps<typeof KyudokuGrid.propTypes>) {
+}: InferProps<typeof KyudokuGrid.propTypes>): ReactNode {
   const nRows = puzzle.cells.length;
   const nColumns = puzzle.cells[0].length;
   const [board, setPuzzle] = useState(puzzle);
@@ -23,13 +23,13 @@ function KyudokuGrid({
       style={style}
       rows={nRows}
       columns={nColumns}
-      renderCell={(row, column) => {
+      renderCell={(row, column): ReactNode => {
         const cell: Cell = board.cells[row][column];
 
         return (
           <TouchableOpacity
             disabled={isDisabled(cell)}
-            onPress={() => {
+            onPress={(): void => {
               cell.state = getNextState(cell);
 
               setPuzzle(new Puzzle(board.cells));
