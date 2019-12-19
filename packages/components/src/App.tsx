@@ -29,7 +29,7 @@ const KYUDOKU_PUZZLE = [
     new KyudokuCell(5),
     new KyudokuCell(3),
     new KyudokuCell(6),
-    new KyudokuCell(4, CellState.BLOCKED)
+    new KyudokuCell(4, CellState.DISABLED)
   ],
   [
     new KyudokuCell(8),
