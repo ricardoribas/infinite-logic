@@ -1,12 +1,12 @@
-import { StyleProp, ViewStyle } from "react-native";
+import { StyleProp, ViewStyle } from 'react-native';
 
-import Cell from "../../models/Cell";
+import Cell from '@infinite/shared/src/models/Cell';
+import CellState from '@infinite/shared/src/enums/CellState';
 import {
   DISABLED_CELL,
   BLOCKED_CELL,
   SELECTED_CELL
-} from "../../theme/cells/Kyudoku";
-import CellState from "../../enums/CellState";
+} from '@infinite/shared/src/theme/cells/Kyudoku';
 
 export default class KyudokuCellStyleFactory {
   static from(cell: Cell): StyleProp<ViewStyle> {
