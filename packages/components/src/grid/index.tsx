@@ -4,9 +4,13 @@ import PropTypes, { InferProps, ReactNodeArray } from 'prop-types';
 
 import Row from './Row';
 import Column from './Column';
-import { GRID as GRID_STYLES } from './Styles';
+import { GRID as GRID_STYLES, GRID_ROWS } from './Styles';
 
-function renderRow(nColumns: Number, renderCell: Function): ReactNodeArray {
+function renderRow(
+  row: Number,
+  nColumns: Number,
+  renderCell: Function
+): ReactNodeArray {
   const columns = [];
 
   for (let i = 0; i < nColumns; i++) {
@@ -17,7 +21,7 @@ function renderRow(nColumns: Number, renderCell: Function): ReactNodeArray {
           flex: 1
         }}
       >
-        {renderCell()}
+        {renderCell(row, i)}
       </Column>
     );
   }
@@ -25,19 +29,26 @@ function renderRow(nColumns: Number, renderCell: Function): ReactNodeArray {
   return columns;
 }
 
-function renderGrid(nRows: Number, nColumns: Number, renderCell: Function) {
+function renderGrid(
+  nRows: Number,
+  nColumns: Number,
+  renderCell: Function
+): ReactNodeArray {
   const rows = [];
 
   for (let i = 0; i < nRows; i++) {
     rows.push(
       <Row
         key={`row_${String(i)}`}
-        style={{
-          flex: nRows,
-          flexDirection: 'row'
-        }}
+        style={[
+          GRID_ROWS,
+          {
+            flex: nRows,
+            flexDirection: 'row'
+          }
+        ]}
       >
-        {renderRow(nColumns, renderCell)}
+        {renderRow(i, nColumns, renderCell)}
       </Row>
     );
   }
