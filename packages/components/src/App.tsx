@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import { View } from 'react-native';
 
-import KyudokuCell from '@infinite/shared/src/models/KyudokuCell';
+import KyudokuCell from '@infinite/shared/src/models/cell/impl/KyudokuCell';
 import CellState from '@infinite/shared/src/enums/CellState';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
 

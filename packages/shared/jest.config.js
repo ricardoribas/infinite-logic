@@ -2,5 +2,6 @@
 const defaultJestConfig = require('../../jest.config');
 
 module.exports = {
-  ...defaultJestConfig
+  ...defaultJestConfig,
+  testPathIgnorePatterns: ['.*Dataset.tsx?', 'node_modules']
 };

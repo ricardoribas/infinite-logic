@@ -1,4 +1,4 @@
-import Cell from './Cell';
+import Cell from './cell';
 
 export default class Puzzle {
   static from(cells: Cell[][]): Puzzle {

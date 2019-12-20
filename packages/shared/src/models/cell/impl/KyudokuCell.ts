@@ -1,4 +1,4 @@
-import Cell from './Cell';
+import Cell from '@infinite/shared/src/models/cell';
 
 export default class KyudokuCell extends Cell {
   toString(): string {

@@ -1,5 +1,5 @@
 import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
-import Cell from '@infinite/shared/src/models/Cell';
+import Cell from '@infinite/shared/src/models/cell';
 import CellState from '@infinite/shared/src/enums/CellState';
 
 describe('KyudokuCellStyle Factory', () => {

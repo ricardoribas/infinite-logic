@@ -1,19 +1,19 @@
-import AbstractGameValidator from '../AbstractGameValidator';
+import AbstractGameValidator from '@infinite/shared/src/game/AbstractGameValidator';
 
 export default class KyudokuGameValidator extends AbstractGameValidator {
-  isValidRow(row: number) {
+  isValidRow(row: number): boolean {
     return false;
   }
 
-  isValidColumn(column: number) {
+  isValidColumn(column: number): boolean {
     return false;
   }
 
-  isValidBlock(row: number, column: number) {
+  isValidBlock(row: number, column: number): boolean {
     return true;
   }
 
-  isValidGame() {
+  isValidGame(): boolean {
     return false;
   }
 }
