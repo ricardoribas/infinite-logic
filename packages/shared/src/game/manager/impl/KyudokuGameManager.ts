@@ -4,16 +4,15 @@ import KyudokuGameState from '@infinite/shared/src/game/state/impl/KyudokuGameSt
 import { PlayCoordinates } from '@infinite/shared/src/types/game';
 import { getNextState } from '@infinite/shared/src/utils/KyudokuCell';
 import KyudokuGameValidator from '@infinite/shared/src/game/validator/impl/KyudokuGameValidator';
+import KyudokuPlayInfo from '@infinite/shared/src/models/game/impl/KyudokuPlayInfo';
 
 export default class KyudokuGameManager extends AbstractGameManager<
-  PlayCoordinates
+  PlayCoordinates,
+  KyudokuGameState,
+  KyudokuPlayInfo
 > {
-  private _gameState: KyudokuGameState;
-
   constructor() {
-    super();
-
-    this._gameState = new KyudokuGameState();
+    super(KyudokuGameState);
   }
 
   play(action: PlayCoordinates, puzzle: Puzzle): Puzzle {
@@ -26,13 +25,14 @@ export default class KyudokuGameManager extends AbstractGameManager<
     const gameValidator = new KyudokuGameValidator(puzzle);
     const isValidRow = gameValidator.isValidRow(action.row);
     const isValidColumn = gameValidator.isValidColumn(action.column);
-
-    this._gameState.update({
+    const playInfo = new KyudokuPlayInfo({
+      coordinates: action,
       cell,
-      action,
       rowValid: isValidRow,
       columnValid: isValidColumn
     });
+
+    this._gameState.update(playInfo);
 
     return Puzzle.fromPuzzle(puzzle);
   }

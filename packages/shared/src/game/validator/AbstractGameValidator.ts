@@ -1,8 +1,8 @@
-import Validator from '@infinite/shared/src/game/Validator';
+import GameValidator from '@infinite/shared/src/game/GameValidator';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-export default class AbstractGameValidator implements Validator {
+export default class AbstractGameValidator implements GameValidator {
   isValidRow(row: number): boolean {
     throw new Error('Method not implemented.');
   }
