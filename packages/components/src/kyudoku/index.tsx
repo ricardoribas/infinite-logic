@@ -15,7 +15,6 @@ import Cell from '@infinite/shared/src/models/cell';
 import KyudokuGameManager from '@infinite/shared/src/game/manager/impl/KyudokuGameManager';
 import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
 import Grid from '@infinite/components/src/grid';
-import PuzzleState from '@infinite/shared/src/enums/PuzzleState';
 
 type Props = {
   puzzle: Puzzle;
@@ -27,29 +26,33 @@ function getInvalidRowRectangle(
   gameManager: KyudokuGameManager,
   puzzle: Puzzle
 ): View | null {
-  const coordinates = gameManager.lastPlay;
+  const gameState = gameManager.gameState;
+  const rowHeight = layoutInfo.height / puzzle.cells.length;
 
-  if (puzzle.state & PuzzleState.INVALID_ROW) {
-    const rowHeight = layoutInfo.height / puzzle.cells.length;
+  return gameState.rowStates.reduce((acc, r: boolean, index: number) => {
+    const isValid = !!r;
 
-    return (
-      <View
-        pointerEvents="box-none"
-        style={{
-          position: 'absolute',
-          zIndex: 2,
-          borderColor: 'blue',
-          borderWidth: 1,
-          left: 0,
-          top: coordinates.row * rowHeight,
-          width: layoutInfo.width,
-          height: rowHeight
-        }}
-      />
-    );
-  }
+    if (!isValid) {
+      acc.push(
+        <View
+          key={`invalid_row_${String(index)}`}
+          pointerEvents="box-none"
+          style={{
+            position: 'absolute',
+            zIndex: 2,
+            borderColor: 'blue',
+            borderWidth: 1,
+            left: 0,
+            top: index * rowHeight,
+            width: layoutInfo.width,
+            height: rowHeight
+          }}
+        />
+      );
+    }
 
-  return null;
+    return acc;
+  }, []);
 }
 
 function getInvalidColumnRectangle(
@@ -57,29 +60,33 @@ function getInvalidColumnRectangle(
   gameManager: KyudokuGameManager,
   puzzle: Puzzle
 ): View | null {
-  const coordinates = gameManager.lastPlay;
+  const gameState = gameManager.gameState;
+  const columnWidth = layoutInfo.width / puzzle.cells[0].length;
 
-  if (puzzle.state & PuzzleState.INVALID_COLUM) {
-    const columnWidth = layoutInfo.width / puzzle.cells[0].length;
+  return gameState.columnStates.reduce((acc, c: boolean, index: number) => {
+    const isValid = !!c;
 
-    return (
-      <View
-        pointerEvents="box-none"
-        style={{
-          position: 'absolute',
-          zIndex: 1,
-          borderColor: 'blue',
-          borderWidth: 1,
-          left: coordinates.column * columnWidth,
-          top: 0,
-          width: columnWidth,
-          height: layoutInfo.height
-        }}
-      />
-    );
-  }
+    if (!isValid) {
+      acc.push(
+        <View
+          key={`invalid_column_${String(index)}`}
+          pointerEvents="box-none"
+          style={{
+            position: 'absolute',
+            zIndex: 1,
+            borderColor: 'blue',
+            borderWidth: 1,
+            left: index * columnWidth,
+            top: 0,
+            width: columnWidth,
+            height: layoutInfo.height
+          }}
+        />
+      );
+    }
 
-  return null;
+    return acc;
+  }, []);
 }
 
 const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
