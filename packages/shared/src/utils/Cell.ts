@@ -5,6 +5,11 @@ export function isDisabled(cell: Cell): boolean {
   return cell.state === CellState.DISABLED;
 }
 
+export function isSelected(cell: Cell): boolean {
+  return cell.state === CellState.SELECTED;
+}
+
 export default {
-  isDisabled
+  isDisabled,
+  isSelected
 };

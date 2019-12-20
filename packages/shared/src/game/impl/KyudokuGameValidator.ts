@@ -1,12 +1,38 @@
 import AbstractGameValidator from '@infinite/shared/src/game/AbstractGameValidator';
+import Cell from '@infinite/shared/src/models/cell';
+import { isSelected } from '@infinite/shared/src/utils/Cell';
+
+const AXIS_MAX_SUM_VALUE = 9;
 
 export default class KyudokuGameValidator extends AbstractGameValidator {
+  // TODO: We don't need to re calculate the whole row.
+  // If we are saving the current state of the board we can validate it
+  // with more efficiency
+
   isValidRow(row: number): boolean {
-    return false;
+    return !(
+      this.puzzle.cells[row].reduce((acc: number, c: Cell): number => {
+        if (isSelected(c)) {
+          acc += c.value;
+        }
+
+        return acc;
+      }, 0) > AXIS_MAX_SUM_VALUE
+    );
   }
 
   isValidColumn(column: number): boolean {
-    return false;
+    return !(
+      this.puzzle.cells.reduce((acc: number, r: Cell[]): number => {
+        const $column = r[column];
+
+        if (isSelected($column)) {
+          acc += $column.value;
+        }
+
+        return acc;
+      }, 0) > AXIS_MAX_SUM_VALUE
+    );
   }
 
   isValidBlock(row: number, column: number): boolean {
