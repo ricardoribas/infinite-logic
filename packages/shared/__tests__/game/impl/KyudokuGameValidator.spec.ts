@@ -1,4 +1,4 @@
-import KyudokuGameValidator from '@infinite/shared/src/game/impl/KyudokuGameValidator';
+import KyudokuGameValidator from '@infinite/shared/src/game/validator/impl/KyudokuGameValidator';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
 
 import KyudokuGameDataset from './KyudokuGameDataset';

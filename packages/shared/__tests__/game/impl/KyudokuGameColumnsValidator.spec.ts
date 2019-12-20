@@ -1,4 +1,4 @@
-import KyudokuGameValidator from '@infinite/shared/src/game/impl/KyudokuGameValidator';
+import KyudokuGameValidator from '@infinite/shared/src/game/validator/impl/KyudokuGameValidator';
 import Cell from '@infinite/shared/src/models/cell';
 import CellState from '@infinite/shared/src/enums/CellState';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
@@ -21,7 +21,7 @@ describe('Kyudoku Game Validator', () => {
       expect(gameValidator.isValidColumn(0)).toBeTruthy();
     });
 
-    it('Should be valid row if all positions are blocked', () => {
+    it('Should be valid column if all positions are blocked', () => {
       const column = [
         [new Cell(6, CellState.BLOCKED)],
         [new Cell(3, CellState.BLOCKED)],
@@ -37,14 +37,14 @@ describe('Kyudoku Game Validator', () => {
       expect(gameValidator.isValidColumn(0)).toBeTruthy();
     });
 
-    it('Should be valid row if a position is disabled', () => {
+    it('Should be valid column if a position is disabled', () => {
       const column = [
         [new Cell(6, CellState.DISABLED)],
-        [new Cell(3, CellState.DISABLED)],
-        [new Cell(4, CellState.DISABLED)],
-        [new Cell(6, CellState.DISABLED)],
-        [new Cell(9, CellState.DISABLED)],
-        [new Cell(4, CellState.DISABLED)]
+        [new Cell(3, CellState.NONE)],
+        [new Cell(4, CellState.NONE)],
+        [new Cell(6, CellState.NONE)],
+        [new Cell(9, CellState.NONE)],
+        [new Cell(4, CellState.NONE)]
       ];
 
       const puzzle = new Puzzle(column);
@@ -53,7 +53,23 @@ describe('Kyudoku Game Validator', () => {
       expect(gameValidator.isValidColumn(0)).toBeTruthy();
     });
 
-    it('Should invalid row if the maximum position cell is selected', () => {
+    it('Should be invalid column if the maximum position cell is selected and there is a default position', () => {
+      const column = [
+        [new Cell(9, CellState.SELECTED)],
+        [new Cell(3, CellState.DISABLED)],
+        [new Cell(4, CellState.NONE)],
+        [new Cell(6, CellState.NONE)],
+        [new Cell(9, CellState.NONE)],
+        [new Cell(4, CellState.NONE)]
+      ];
+
+      const puzzle = new Puzzle(column);
+      const gameValidator = new KyudokuGameValidator(puzzle);
+
+      expect(gameValidator.isValidColumn(0)).toBeFalsy();
+    });
+
+    it('Should invalid column if the maximum position cell is selected', () => {
       const column = [
         [new Cell(9, CellState.SELECTED)],
         [new Cell(3, CellState.NONE)],
@@ -69,7 +85,7 @@ describe('Kyudoku Game Validator', () => {
       expect(gameValidator.isValidColumn(0)).toBeTruthy();
     });
 
-    it('Should invalid row if some positions exceed the maximum', () => {
+    it('Should invalid column if some positions exceed the maximum', () => {
       const column = [
         [new Cell(6, CellState.SELECTED)],
         [new Cell(3, CellState.SELECTED)],

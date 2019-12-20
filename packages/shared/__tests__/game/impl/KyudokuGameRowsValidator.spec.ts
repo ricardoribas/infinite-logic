@@ -1,4 +1,4 @@
-import KyudokuGameValidator from '@infinite/shared/src/game/impl/KyudokuGameValidator';
+import KyudokuGameValidator from '@infinite/shared/src/game/validator/impl/KyudokuGameValidator';
 import Cell from '@infinite/shared/src/models/cell';
 import CellState from '@infinite/shared/src/enums/CellState';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
@@ -40,11 +40,11 @@ describe('Kyudoku Game Validator', () => {
     it('Should be valid row if a position is disabled', () => {
       const row = [
         new Cell(6, CellState.DISABLED),
-        new Cell(3, CellState.DISABLED),
-        new Cell(4, CellState.DISABLED),
-        new Cell(6, CellState.DISABLED),
-        new Cell(9, CellState.DISABLED),
-        new Cell(4, CellState.DISABLED)
+        new Cell(3, CellState.NONE),
+        new Cell(4, CellState.NONE),
+        new Cell(6, CellState.NONE),
+        new Cell(9, CellState.NONE),
+        new Cell(4, CellState.NONE)
       ];
 
       const puzzle = new Puzzle([row]);
@@ -53,7 +53,7 @@ describe('Kyudoku Game Validator', () => {
       expect(gameValidator.isValidRow(0)).toBeTruthy();
     });
 
-    it('Should invalid row if the maximum position cell is selected', () => {
+    it('Should be valid row if the maximum position cell is selected', () => {
       const row = [
         new Cell(9, CellState.SELECTED),
         new Cell(3, CellState.NONE),
@@ -67,6 +67,22 @@ describe('Kyudoku Game Validator', () => {
       const gameValidator = new KyudokuGameValidator(puzzle);
 
       expect(gameValidator.isValidRow(0)).toBeTruthy();
+    });
+
+    it('Should be invalid row if the maximum position cell is selected and there is a default position', () => {
+      const row = [
+        new Cell(9, CellState.SELECTED),
+        new Cell(3, CellState.DISABLED),
+        new Cell(4, CellState.NONE),
+        new Cell(6, CellState.NONE),
+        new Cell(9, CellState.NONE),
+        new Cell(4, CellState.NONE)
+      ];
+
+      const puzzle = new Puzzle([row]);
+      const gameValidator = new KyudokuGameValidator(puzzle);
+
+      expect(gameValidator.isValidRow(0)).toBeFalsy();
     });
 
     it('Should invalid row if some positions exceed the maximum', () => {

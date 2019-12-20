@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNodeArray } from 'react';
-import { View, ViewStyle } from 'react-native';
+import { View, ViewStyle, LayoutChangeEvent, StyleProp } from 'react-native';
 
 import Row from './Row';
 import Column from './Column';
@@ -9,8 +9,8 @@ type Props = {
   rows: number;
   columns: number;
   renderCell: (row: number, column: number) => void;
-  style: ViewStyle | ViewStyle[];
-  onLayout?: () => void;
+  style: StyleProp<ViewStyle>;
+  onLayout?: (event: LayoutChangeEvent) => void;
 };
 
 function renderRow(
