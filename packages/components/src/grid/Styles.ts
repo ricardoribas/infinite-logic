@@ -1,5 +1,5 @@
-import { GRID_OUTER_BORDER_COLOR } from 'constants/Colors';
-import { GRID_DEFAULT_BORDER_WIDTH } from 'constants/UI';
+import { GRID_OUTER_BORDER_COLOR } from '../constants/Colors';
+import { GRID_DEFAULT_BORDER_WIDTH } from '../constants/UI';
 
 export const GRID = {
   borderLeftWidth: GRID_DEFAULT_BORDER_WIDTH,

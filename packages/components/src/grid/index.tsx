@@ -10,6 +10,7 @@ type Props = {
   columns: number;
   renderCell: (row: number, column: number) => void;
   style: ViewStyle | ViewStyle[];
+  onLayout?: () => void;
 };
 
 function renderRow(
@@ -66,9 +67,10 @@ const Grid: FunctionComponent<Props> = ({
   rows,
   columns,
   renderCell,
+  onLayout,
   style
 }: Props) => (
-  <View style={[GRID_STYLES, style]}>
+  <View style={[GRID_STYLES, style]} onLayout={onLayout}>
     {renderGrid(rows, columns, renderCell)}
   </View>
 );
