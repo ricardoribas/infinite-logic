@@ -34,6 +34,7 @@ function getInvalidRowRectangle(
 
     return (
       <View
+        pointerEvents="box-none"
         style={{
           position: 'absolute',
           zIndex: 2,
@@ -63,6 +64,7 @@ function getInvalidColumnRectangle(
 
     return (
       <View
+        pointerEvents="box-none"
         style={{
           position: 'absolute',
           zIndex: 1,

@@ -1,8 +1,12 @@
 import AbstractGameManager from '@infinite/shared/src/game/manager/AbstractGameManager';
 import KyudokuGameValidator from '@infinite/shared/src/game/validator/impl/KyudokuGameValidator';
-import { getNextState } from '@infinite/shared/src/utils/KyudokuCell';
-import PuzzleState from '@infinite/shared/src/enums/PuzzleState';
+import {
+  getNextState,
+  isSelected
+} from '@infinite/shared/src/utils/KyudokuCell';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
+import { AXIS_MAX_SUM_VALUE } from '@infinite/shared/src/constants/Kyudoku';
+import CellState from '../../../enums/CellState';
 
 type PlayCoordinates = {
   row: number;
@@ -12,6 +16,10 @@ type PlayCoordinates = {
 export default class KyudokuGameManager extends AbstractGameManager<
   PlayCoordinates
 > {
+  private rowStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
+  private columnStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
+  private selectedCells: number[] = Array(AXIS_MAX_SUM_VALUE).fill(0);
+
   play(action: PlayCoordinates, puzzle: Puzzle): Puzzle {
     super.play(action, puzzle);
 
@@ -21,17 +29,18 @@ export default class KyudokuGameManager extends AbstractGameManager<
 
     const gameValidator = new KyudokuGameValidator(puzzle);
 
-    let gameState = PuzzleState.NONE;
+    this.rowStates[action.row] = gameValidator.isValidRow(action.row);
+    this.columnStates[action.column] = gameValidator.isValidColumn(
+      action.column
+    );
 
-    if (!gameValidator.isValidRow(action.row)) {
-      gameState |= PuzzleState.INVALID_ROW;
-    }
+    const oldSelectedCellCounter = this.selectedCells[cell.value - 1];
+    const newSelectedCellCounter = Math.max(
+      0,
+      oldSelectedCellCounter + (isSelected(cell) ? 1 : -1)
+    );
 
-    if (!gameValidator.isValidColumn(action.column)) {
-      gameState |= PuzzleState.INVALID_COLUM;
-    }
-
-    puzzle.state = gameState;
+    this.selectedCells[cell.value - 1] = newSelectedCellCounter;
 
     return Puzzle.fromPuzzle(puzzle);
   }

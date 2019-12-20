@@ -1,8 +1,7 @@
 import AbstractGameValidator from '@infinite/shared/src/game/validator/AbstractGameValidator';
 import Cell from '@infinite/shared/src/models/cell';
 import { isSelected } from '@infinite/shared/src/utils/KyudokuCell';
-
-const AXIS_MAX_SUM_VALUE = 9;
+import { AXIS_MAX_SUM_VALUE } from '@infinite/shared/src/constants/Kyudoku';
 
 export default class KyudokuGameValidator extends AbstractGameValidator {
   // TODO: We don't need to re calculate the whole row.

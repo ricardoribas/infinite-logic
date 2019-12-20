@@ -1,5 +1,4 @@
 import Cell from '@infinite/shared/src/models/cell';
-import PuzzleState from '@infinite/shared/src/enums/PuzzleState';
 
 export default class Puzzle {
   static from(cells: Cell[][]): Puzzle {
@@ -7,23 +6,12 @@ export default class Puzzle {
   }
 
   static fromPuzzle(puzzle: Puzzle): Puzzle {
-    return new Puzzle(puzzle.cells, puzzle.state);
+    return new Puzzle(puzzle.cells);
   }
 
-  constructor(
-    private _cells: Cell[][],
-    private _state: PuzzleState = PuzzleState.NONE
-  ) {}
+  constructor(private _cells: Cell[][]) {}
 
   get cells(): Cell[][] {
     return this._cells;
-  }
-
-  get state(): PuzzleState {
-    return this._state;
-  }
-
-  set state(newState: PuzzleState) {
-    this._state = newState;
   }
 }
