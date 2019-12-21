@@ -71,6 +71,6 @@ export default class KyudokuGameValidator extends AbstractGameValidator<
       }
     }
 
-    return true;
+    return state.getStatelessCells(puzzle) === 0;
   }
 }

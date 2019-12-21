@@ -5,7 +5,7 @@ import KyudokuPlayInfo from '@infinite/shared/src/models/game/impl/KyudokuPlayIn
 import {
   isSelected,
   isDisabled,
-  isBlocked
+  hasState
 } from '@infinite/shared/src/utils/KyudokuCell';
 import { PlayCoordinates } from '@infinite/shared/src/types/game';
 import Cell from '@infinite/shared/src/models/cell';
@@ -40,6 +40,13 @@ export default class KyudokuGameState extends AbstractGameState<
         }
       }
     }
+  }
+
+  getStatelessCells(puzzle: Puzzle): number {
+    return puzzle.cells.reduce(
+      (acc, r): number => acc + r.filter((c) => !hasState(c)).length,
+      0
+    );
   }
 
   addSelectedCell(cell: Cell, coordinates: PlayCoordinates): void {

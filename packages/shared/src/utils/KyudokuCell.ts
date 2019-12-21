@@ -21,8 +21,8 @@ export function isSelected(cell: Cell): boolean {
   return cell.state === CellState.SELECTED;
 }
 
-export function isBlocked(cell: Cell): boolean {
-  return cell.state === CellState.BLOCKED;
+export function hasState(cell: Cell): boolean {
+  return cell.state !== CellState.NONE;
 }
 
 export default {
