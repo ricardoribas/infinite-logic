@@ -23,6 +23,10 @@ export default class AbstractGameManager<
     return puzzle;
   }
 
+  get gameState(): U {
+    return this._gameState;
+  }
+
   get lastPlay(): T | undefined {
     return this._lastAction;
   }

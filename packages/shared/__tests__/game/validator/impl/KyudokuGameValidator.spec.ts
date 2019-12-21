@@ -10,7 +10,7 @@ describe('Kyudoku Game Validator', () => {
       (input, expected) => {
         const validator = new KyudokuGameValidator(input);
 
-        expect(validator.isValidGame()).toBe(expected);
+        expect(validator.hasWon()).toBe(expected);
       }
     );
   });

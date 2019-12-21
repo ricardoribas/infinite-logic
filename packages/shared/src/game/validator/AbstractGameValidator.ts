@@ -6,15 +6,19 @@ export default class AbstractGameValidator implements GameValidator {
   isValidRow(row: number): boolean {
     throw new Error('Method not implemented.');
   }
+
   isValidColumn(column: number): boolean {
     throw new Error('Method not implemented.');
   }
+
   isValidBlock(row: number, column: number): boolean {
     throw new Error('Method not implemented.');
   }
-  isValidGame(): boolean {
+
+  hasWon(): boolean {
     throw new Error('Method not implemented.');
   }
+
   constructor(protected _puzzle: Puzzle) {}
 
   get puzzle(): Puzzle {

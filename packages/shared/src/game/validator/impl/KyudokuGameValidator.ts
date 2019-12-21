@@ -4,10 +4,6 @@ import { isSelected } from '@infinite/shared/src/utils/KyudokuCell';
 import { AXIS_MAX_SUM_VALUE } from '@infinite/shared/src/constants/Kyudoku';
 
 export default class KyudokuGameValidator extends AbstractGameValidator {
-  // TODO: We don't need to re calculate the whole row.
-  // If we are saving the current state of the board we can validate it
-  // with more efficiency
-
   isValidRow(row: number): boolean {
     const rowSum: number = this.puzzle.cells[row].reduce(
       (acc: number, c: Cell): number => {
@@ -45,7 +41,17 @@ export default class KyudokuGameValidator extends AbstractGameValidator {
     return true;
   }
 
-  isValidGame(): boolean {
+  hasWon(): boolean {
     return false;
+    //   const hasInvalidRows =
+    //     this.rowStates.filter(Boolean).length < AXIS_MAX_SUM_VALUE;
+    //   const hasInvalidColumns =
+    //     this.columnStates.filter(Boolean).length < AXIS_MAX_SUM_VALUE;
+    //   return (
+    //     !hasInvalidRows &&
+    //     !hasInvalidColumns &&
+    //     this.hasAllValuesSelected() &&
+    //     !this.hasDisabledCellsSelected()
+    //   );
   }
 }

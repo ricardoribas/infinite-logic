@@ -1,4 +1,4 @@
-import AbstractGameValidator from '@infinite/shared/src/game/AbstractGameValidator';
+import AbstractGameValidator from '@infinite/shared/src/game/validator/AbstractGameValidator';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
 import Cell from '@infinite/shared/src/models/cell';
 
@@ -29,25 +29,19 @@ describe('AbstractGame Validaator', () => {
 
   it('Should throw while validating row', () => {
     expect(() => {
-      gameValidator.isValidRow();
+      gameValidator.isValidRow(10);
     }).toThrow('Method not implemented.');
   });
 
   it('Should throw while validating column', () => {
     expect(() => {
-      gameValidator.isValidColumn();
+      gameValidator.isValidColumn(9);
     }).toThrow('Method not implemented.');
   });
 
   it('Should throw while validating block', () => {
     expect(() => {
-      gameValidator.isValidBlock();
-    }).toThrow('Method not implemented.');
-  });
-
-  it('Should throw while validating game', () => {
-    expect(() => {
-      gameValidator.isValidGame();
+      gameValidator.isValidBlock(1, 2);
     }).toThrow('Method not implemented.');
   });
 });

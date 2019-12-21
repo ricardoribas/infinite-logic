@@ -13,6 +13,10 @@ export function getNextState(cell: Cell): CellState {
   return STATES_SEQUENCE[(currentSequenceIndex + 1) % STATES_SEQUENCE.length];
 }
 
+export function isDisabled(cell: Cell): boolean {
+  return cell.state === CellState.DISABLED;
+}
+
 export function isSelected(cell: Cell): boolean {
   return cell.state === CellState.SELECTED || cell.state === CellState.DISABLED;
 }

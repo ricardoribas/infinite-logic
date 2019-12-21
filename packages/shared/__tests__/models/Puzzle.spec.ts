@@ -24,10 +24,10 @@ describe('Puzzle Model', () => {
   });
 
   it('Initialize puzzle from another puzzle', () => {
-    const oldPuzzle = new Puzzle([], PuzzleState.INVALID_BLOCK);
+    const oldPuzzle = new Puzzle([], PuzzleState.PROGRESS);
     const newPuzzle = Puzzle.fromPuzzle(oldPuzzle);
 
-    expect(newPuzzle.state).toBe(PuzzleState.INVALID_BLOCK);
+    expect(newPuzzle.state).toBe(PuzzleState.PROGRESS);
     expect(newPuzzle.cells).toHaveLength(0);
   });
 });
