@@ -20,7 +20,7 @@ export default class AbstractGameValidator<
     throw new Error('Method not implemented.');
   }
 
-  hasWon(_state: T): boolean {
+  hasWon(puzzle: Puzzle, _state: T): boolean {
     throw new Error('Method not implemented.');
   }
 

@@ -2,7 +2,11 @@ import AbstractGameState from '@infinite/shared/src/game/state/AbstractGameState
 import Puzzle from '@infinite/shared/src/models/Puzzle';
 import { AXIS_MAX_SUM_VALUE } from '@infinite/shared/src/constants/Kyudoku';
 import KyudokuPlayInfo from '@infinite/shared/src/models/game/impl/KyudokuPlayInfo';
-import { isSelected, isDisabled } from '@infinite/shared/src/utils/KyudokuCell';
+import {
+  isSelected,
+  isDisabled,
+  isBlocked
+} from '@infinite/shared/src/utils/KyudokuCell';
 import { PlayCoordinates } from '@infinite/shared/src/types/game';
 import Cell from '@infinite/shared/src/models/cell';
 
@@ -24,11 +28,12 @@ export default class KyudokuGameState extends AbstractGameState<
     for (let r = 0; r < puzzle.cells.length; r++) {
       for (let c = 0; c < puzzle.cells[r].length; c++) {
         const cell = puzzle.cells[r][c];
+        const index = getCellIndex(cell);
 
         if (isDisabled(cell)) {
-          this._disabledCells[getCellIndex(cell)] = 1;
+          this._disabledCells[index] = 1;
         } else if (isSelected(cell)) {
-          this._selectedCells[getCellIndex(cell)].push({
+          this._selectedCells[index].push({
             row: r,
             column: c
           });

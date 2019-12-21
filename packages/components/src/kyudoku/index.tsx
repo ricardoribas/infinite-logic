@@ -29,24 +29,30 @@ function getInvalidRowRectangle(
   const gameState = gameManager.gameState;
   const rowHeight = layoutInfo.height / puzzle.cells.length;
 
-  return gameState.rowStates
-    .filter((r) => !r)
-    .map((_r, index) => (
-      <View
-        key={`invalid_row_${String(index)}`}
-        pointerEvents="box-none"
-        style={{
-          position: 'absolute',
-          zIndex: 2,
-          borderColor: 'blue',
-          borderWidth: 1,
-          left: 0,
-          top: index * rowHeight,
-          width: layoutInfo.width,
-          height: rowHeight
-        }}
-      />
-    ));
+  const rowRectangles: JSX.Element[] = [];
+
+  gameState.rowStates.forEach((_r, index) => {
+    if (!_r) {
+      rowRectangles.push(
+        <View
+          key={`invalid_row_${String(index)}`}
+          pointerEvents="box-none"
+          style={{
+            position: 'absolute',
+            zIndex: 2,
+            borderColor: 'blue',
+            borderWidth: 1,
+            left: 0,
+            top: index * rowHeight,
+            width: layoutInfo.width,
+            height: rowHeight
+          }}
+        />
+      );
+    }
+  });
+
+  return rowRectangles;
 }
 
 function getInvalidColumnRectangle(
@@ -57,24 +63,30 @@ function getInvalidColumnRectangle(
   const gameState = gameManager.gameState;
   const columnWidth = layoutInfo.width / puzzle.cells[0].length;
 
-  return gameState.columnStates
-    .filter((c) => !c)
-    .map((_c, index) => (
-      <View
-        key={`invalid_column_${String(index)}`}
-        pointerEvents="box-none"
-        style={{
-          position: 'absolute',
-          zIndex: 1,
-          borderColor: 'blue',
-          borderWidth: 1,
-          left: index * columnWidth,
-          top: 0,
-          width: columnWidth,
-          height: layoutInfo.height
-        }}
-      />
-    ));
+  const columnRectangles: JSX.Element[] = [];
+
+  gameState.columnStates.forEach((_c, index) => {
+    if (!_c) {
+      columnRectangles.push(
+        <View
+          key={`invalid_column_${String(index)}`}
+          pointerEvents="box-none"
+          style={{
+            position: 'absolute',
+            zIndex: 1,
+            borderColor: 'blue',
+            borderWidth: 1,
+            left: index * columnWidth,
+            top: 0,
+            width: columnWidth,
+            height: layoutInfo.height
+          }}
+        />
+      );
+    }
+  });
+
+  return columnRectangles;
 }
 
 const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
