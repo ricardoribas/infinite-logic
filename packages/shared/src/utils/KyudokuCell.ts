@@ -1,5 +1,5 @@
-import Cell from './../models/cell';
-import CellState from '../enums/CellState';
+import Cell from '@infinite/shared/src/models/cell';
+import CellState from '@infinite/shared/src/enums/CellState';
 
 const STATES_SEQUENCE: CellState[] = [
   CellState.NONE,
@@ -18,7 +18,7 @@ export function isDisabled(cell: Cell): boolean {
 }
 
 export function isSelected(cell: Cell): boolean {
-  return cell.state === CellState.SELECTED || cell.state === CellState.DISABLED;
+  return cell.state === CellState.SELECTED;
 }
 
 export default {

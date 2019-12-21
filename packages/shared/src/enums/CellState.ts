@@ -1,9 +1,9 @@
 enum CellState {
-  NONE = 0,
-  SELECTED,
-  BLOCKED,
-  DISABLED,
-  INVALID
+  NONE = 'NONE',
+  SELECTED = 'SELECTED',
+  BLOCKED = 'BLOCKED',
+  DISABLED = 'DISABLED',
+  INVALID = 'INVALID'
 }
 
 export default CellState;

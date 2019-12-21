@@ -39,7 +39,7 @@ export default class KyudokuGameManager extends AbstractGameManager<
 
     this.gameState.update(playInfo);
 
-    puzzle.state = gameValidator.hasWon()
+    puzzle.state = gameValidator.hasWon(this.gameState)
       ? PuzzleState.FINISHED
       : PuzzleState.PROGRESS;
 

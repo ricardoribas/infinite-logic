@@ -1,8 +1,13 @@
 import GameValidator from '@infinite/shared/src/game/GameValidator';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
+import AbstractGameState from '@infinite/shared/src/game/state/AbstractGameState';
+import AbstractPlayInfo from '@infinite/shared/src/models/game/AbstractPlayInfo';
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-export default class AbstractGameValidator implements GameValidator {
+export default class AbstractGameValidator<
+  T extends AbstractGameState<U>,
+  U extends AbstractPlayInfo
+> implements GameValidator<T> {
   isValidRow(row: number): boolean {
     throw new Error('Method not implemented.');
   }
@@ -15,7 +20,7 @@ export default class AbstractGameValidator implements GameValidator {
     throw new Error('Method not implemented.');
   }
 
-  hasWon(): boolean {
+  hasWon(_state: T): boolean {
     throw new Error('Method not implemented.');
   }
 

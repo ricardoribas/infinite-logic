@@ -2,8 +2,13 @@ import AbstractGameValidator from '@infinite/shared/src/game/validator/AbstractG
 import Cell from '@infinite/shared/src/models/cell';
 import { isSelected } from '@infinite/shared/src/utils/KyudokuCell';
 import { AXIS_MAX_SUM_VALUE } from '@infinite/shared/src/constants/Kyudoku';
+import KyudokuGameState from '@infinite/shared/src/game/state/impl/KyudokuGameState';
+import KyudokuPlayInfo from '@infinite/shared/src/models/game/impl/KyudokuPlayInfo';
 
-export default class KyudokuGameValidator extends AbstractGameValidator {
+export default class KyudokuGameValidator extends AbstractGameValidator<
+  KyudokuGameState,
+  KyudokuPlayInfo
+> {
   isValidRow(row: number): boolean {
     const rowSum: number = this.puzzle.cells[row].reduce(
       (acc: number, c: Cell): number => {
@@ -37,21 +42,32 @@ export default class KyudokuGameValidator extends AbstractGameValidator {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  isValidBlock(row: number, column: number): boolean {
+  isValidBlock(_row: number, _column: number): boolean {
     return true;
   }
 
-  hasWon(): boolean {
-    return false;
-    //   const hasInvalidRows =
-    //     this.rowStates.filter(Boolean).length < AXIS_MAX_SUM_VALUE;
-    //   const hasInvalidColumns =
-    //     this.columnStates.filter(Boolean).length < AXIS_MAX_SUM_VALUE;
-    //   return (
-    //     !hasInvalidRows &&
-    //     !hasInvalidColumns &&
-    //     this.hasAllValuesSelected() &&
-    //     !this.hasDisabledCellsSelected()
-    //   );
+  hasWon(state: KyudokuGameState): boolean {
+    const hasInvalidRows =
+      state.rowStates.filter(Boolean).length < AXIS_MAX_SUM_VALUE;
+    const hasInvalidColumns =
+      state.columnStates.filter(Boolean).length < AXIS_MAX_SUM_VALUE;
+
+    if (hasInvalidRows || hasInvalidColumns) {
+      return false;
+    }
+
+    for (let i = 0; i < AXIS_MAX_SUM_VALUE; i++) {
+      const hasRepeatedCell = state.selectedCells[i] > 1;
+      const hasDuplicatedCell =
+        state.selectedCells[i] > 0 && state.disabledCells[i] > 0;
+      const hasNoCellSelected =
+        state.selectedCells[i] === 0 && state.disabledCells[i] === 0;
+
+      if (hasRepeatedCell || hasDuplicatedCell || hasNoCellSelected) {
+        return false;
+      }
+    }
+
+    return true;
   }
 }

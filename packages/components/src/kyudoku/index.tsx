@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, Component } from 'react';
+import React, { useState, ReactNode, FunctionComponent } from 'react';
 import {
   Text,
   View,
@@ -29,22 +29,24 @@ function getInvalidRowRectangle(
   const gameState = gameManager.gameState;
   const rowHeight = layoutInfo.height / puzzle.cells.length;
 
-  return gameState.rowStates.filter(Boolean).map((_r, index) => (
-    <View
-      key={`invalid_row_${String(index)}`}
-      pointerEvents="box-none"
-      style={{
-        position: 'absolute',
-        zIndex: 2,
-        borderColor: 'blue',
-        borderWidth: 1,
-        left: 0,
-        top: index * rowHeight,
-        width: layoutInfo.width,
-        height: rowHeight
-      }}
-    />
-  ));
+  return gameState.rowStates
+    .filter((r) => !r)
+    .map((_r, index) => (
+      <View
+        key={`invalid_row_${String(index)}`}
+        pointerEvents="box-none"
+        style={{
+          position: 'absolute',
+          zIndex: 2,
+          borderColor: 'blue',
+          borderWidth: 1,
+          left: 0,
+          top: index * rowHeight,
+          width: layoutInfo.width,
+          height: rowHeight
+        }}
+      />
+    ));
 }
 
 function getInvalidColumnRectangle(
@@ -55,133 +57,127 @@ function getInvalidColumnRectangle(
   const gameState = gameManager.gameState;
   const columnWidth = layoutInfo.width / puzzle.cells[0].length;
 
-  return gameState.columnStates.filter(Boolean).map((_c, index) => (
-    <View
-      key={`invalid_column_${String(index)}`}
-      pointerEvents="box-none"
-      style={{
-        position: 'absolute',
-        zIndex: 1,
-        borderColor: 'blue',
-        borderWidth: 1,
-        left: index * columnWidth,
-        top: 0,
-        width: columnWidth,
-        height: layoutInfo.height
-      }}
-    />
-  ));
+  return gameState.columnStates
+    .filter((c) => !c)
+    .map((_c, index) => (
+      <View
+        key={`invalid_column_${String(index)}`}
+        pointerEvents="box-none"
+        style={{
+          position: 'absolute',
+          zIndex: 1,
+          borderColor: 'blue',
+          borderWidth: 1,
+          left: index * columnWidth,
+          top: 0,
+          width: columnWidth,
+          height: layoutInfo.height
+        }}
+      />
+    ));
 }
 
-export default class KyudokuGrid extends Component<Props> {
-  gameManager: KyudokuGameManager;
+const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
+  const nRows = puzzle.cells.length;
+  const nColumns = puzzle.cells[0].length;
+  const [currentPuzzle, setPuzzle] = useState<Puzzle>(puzzle);
+  const [layoutInfo, setLayoutInfo] = useState<LayoutRectangle>();
+  const [gameManager] = useState<KyudokuGameManager>(
+    function getInitialState() {
+      return new KyudokuGameManager(puzzle);
+    }
+  );
 
-  constructor(props: Props) {
-    super(props);
-
-    this.gameManager = new KyudokuGameManager(this.props.puzzle);
-  }
-
-  render(): ReactNode {
-    const { puzzle, style }: Props = this.props;
-    const nRows = puzzle.cells.length;
-    const nColumns = puzzle.cells[0].length;
-    const [currentPuzzle, setPuzzle] = useState<Puzzle>(puzzle);
-    const [layoutInfo, setLayoutInfo] = useState<LayoutRectangle>();
-
-    return (
-      <>
-        <Text>
-          Finished{' '}
-          {currentPuzzle.state === PuzzleState.FINISHED ? 'true' : 'false'}
-        </Text>
-        <View
+  return (
+    <>
+      <Text>
+        Finished{' '}
+        {currentPuzzle.state === PuzzleState.FINISHED ? 'true' : 'false'}
+      </Text>
+      <View
+        style={[
+          style,
+          {
+            backgroundColor: 'yellow'
+          }
+        ]}
+      >
+        {layoutInfo &&
+          getInvalidColumnRectangle(layoutInfo, gameManager, currentPuzzle)}
+        {layoutInfo &&
+          getInvalidRowRectangle(layoutInfo, gameManager, currentPuzzle)}
+        <Grid
           style={[
-            style,
             {
-              backgroundColor: 'yellow'
-            }
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100'
+            },
+            style
           ]}
-        >
-          {layoutInfo &&
-            getInvalidColumnRectangle(
-              layoutInfo,
-              this.gameManager,
-              currentPuzzle
-            )}
-          {layoutInfo &&
-            getInvalidRowRectangle(layoutInfo, this.gameManager, currentPuzzle)}
-          <Grid
-            style={[
-              {
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100'
-              },
-              style
-            ]}
-            rows={nRows}
-            columns={nColumns}
-            onLayout={(event: LayoutChangeEvent): void => {
-              const layout = event.nativeEvent.layout;
-              const { width, height, x, y } = layout;
+          rows={nRows}
+          columns={nColumns}
+          onLayout={(event: LayoutChangeEvent): void => {
+            const layout = event.nativeEvent.layout;
+            const { width, height, x, y } = layout;
 
-              setLayoutInfo({
-                width,
-                height,
-                x,
-                y
-              });
-            }}
-            renderCell={(row, column): ReactNode => {
-              const cell: Cell = currentPuzzle.cells[row][column];
+            setLayoutInfo({
+              width,
+              height,
+              x,
+              y
+            });
+          }}
+          renderCell={(row, column): ReactNode => {
+            const cell: Cell = currentPuzzle.cells[row][column];
 
-              return (
-                <TouchableOpacity
-                  disabled={isDisabled(cell)}
-                  onPress={(): void => {
-                    const newPuzzle = this.gameManager.play(
-                      {
-                        row,
-                        column
-                      },
-                      currentPuzzle
-                    );
+            return (
+              <TouchableOpacity
+                disabled={isDisabled(cell)}
+                onPress={(): void => {
+                  const newPuzzle = gameManager.play(
+                    {
+                      row,
+                      column
+                    },
+                    currentPuzzle
+                  );
 
-                    setPuzzle(newPuzzle);
-                  }}
-                  style={{
-                    flex: 1,
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}
+                  setPuzzle(newPuzzle);
+                }}
+                style={{
+                  flex: 1,
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <View
+                  style={[
+                    {
+                      padding: 10,
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    },
+                    KyudokuCellStyleFactory.from(cell)
+                  ]}
                 >
-                  <View
-                    style={[
-                      {
-                        padding: 10,
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      },
-                      KyudokuCellStyleFactory.from(cell)
-                    ]}
+                  <Text
+                    style={{
+                      fontSize: 20
+                    }}
                   >
-                    <Text
-                      style={{
-                        fontSize: 20
-                      }}
-                    >
-                      {cell.toString()}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              );
-            }}
-          />
-        </View>
-      </>
-    );
-  }
-}
+                    {cell.toString()}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            );
+          }}
+        />
+      </View>
+    </>
+  );
+};
+
+export default KyudokuGrid;
