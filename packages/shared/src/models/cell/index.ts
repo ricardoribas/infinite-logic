@@ -1,4 +1,4 @@
-import CellState from '../enums/CellState';
+import CellState from '@infinite/shared/src/enums/CellState';
 
 export default class Cell {
   constructor(

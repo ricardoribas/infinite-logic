@@ -1,5 +1,5 @@
 import { isDisabled } from '@infinite/shared/src/utils/Cell';
-import Cell from '@infinite/shared/src/models/Cell';
+import Cell from '@infinite/shared/src/models/cell';
 import CellState from '@infinite/shared/src/enums/CellState';
 
 describe('Cell Utils', () => {

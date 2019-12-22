@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNodeArray } from 'react';
-import { View, ViewStyle } from 'react-native';
+import { View, ViewStyle, LayoutChangeEvent, StyleProp } from 'react-native';
 
 import Row from './Row';
 import Column from './Column';
@@ -9,7 +9,8 @@ type Props = {
   rows: number;
   columns: number;
   renderCell: (row: number, column: number) => void;
-  style: ViewStyle | ViewStyle[];
+  style: StyleProp<ViewStyle>;
+  onLayout?: (event: LayoutChangeEvent) => void;
 };
 
 function renderRow(
@@ -66,9 +67,10 @@ const Grid: FunctionComponent<Props> = ({
   rows,
   columns,
   renderCell,
+  onLayout,
   style
 }: Props) => (
-  <View style={[GRID_STYLES, style]}>
+  <View style={[GRID_STYLES, style]} onLayout={onLayout}>
     {renderGrid(rows, columns, renderCell)}
   </View>
 );
