@@ -20,8 +20,9 @@ export default class KyudokuGameState extends AbstractGameState<
   private _rowStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
   private _columnStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
   private _disabledCells: number[] = Array(AXIS_MAX_SUM_VALUE).fill(0);
-  private _selectedCells: PlayCoordinates[][] = Array(AXIS_MAX_SUM_VALUE).fill(
-    []
+  private _selectedCells: PlayCoordinates[][] = Array.from(
+    Array(AXIS_MAX_SUM_VALUE),
+    () => []
   );
 
   initialize(puzzle: Puzzle): void {
@@ -50,6 +51,8 @@ export default class KyudokuGameState extends AbstractGameState<
   }
 
   addSelectedCell(cell: Cell, coordinates: PlayCoordinates): void {
+    debugger;
+
     this._selectedCells[getCellIndex(cell)].push(coordinates);
   }
 

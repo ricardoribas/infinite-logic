@@ -3,7 +3,6 @@ import Puzzle from '@infinite/shared/src/models/Puzzle';
 import Cell from '@infinite/shared/src/models/cell';
 import CellState from '@infinite/shared/src/enums/CellState';
 import KyudokuPlayInfo from '@infinite/shared/src/models/game/impl/KyudokuPlayInfo';
-import { AXIS_MAX_SUM_VALUE } from '../../../../src/constants/Kyudoku';
 
 describe('KyudokuGameState Model', () => {
   let GAME_STATE: KyudokuGameState;
@@ -235,121 +234,6 @@ describe('KyudokuGameState Model', () => {
           0
         ]);
       });
-    });
-  });
-
-  describe('Has all values selected', () => {
-    it('Should not have all values selected', () => {
-      const gameState = new KyudokuGameState();
-
-      expect(gameState.hasAllValuesSelected()).toBeFalsy();
-    });
-
-    it('Should have all values selected', () => {
-      const gameState = new KyudokuGameState();
-
-      for (let i = 1; i <= AXIS_MAX_SUM_VALUE; i++) {
-        const playInfo = new KyudokuPlayInfo({
-          rowValid: true,
-          columnValid: true,
-          coordinates: {
-            row: 1,
-            column: 2
-          },
-          cell: new Cell(i, CellState.SELECTED)
-        });
-
-        gameState.update(playInfo);
-      }
-
-      expect(gameState.hasAllValuesSelected()).toBeTruthy();
-    });
-
-    it('Should not have all values selected as some are repeated', () => {
-      const gameState = new KyudokuGameState();
-
-      for (let i = 1; i <= AXIS_MAX_SUM_VALUE; i++) {
-        const playInfo = new KyudokuPlayInfo({
-          rowValid: true,
-          columnValid: true,
-          coordinates: {
-            row: 1,
-            column: 2
-          },
-          cell: new Cell(i, CellState.SELECTED)
-        });
-
-        gameState.update(playInfo);
-      }
-
-      const repeatedPlayInfo = new KyudokuPlayInfo({
-        rowValid: true,
-        columnValid: true,
-        coordinates: {
-          row: 1,
-          column: 2
-        },
-        cell: new Cell(2, CellState.SELECTED)
-      });
-
-      gameState.update(repeatedPlayInfo);
-
-      expect(gameState.hasAllValuesSelected()).toBeFalsy();
-      expect(gameState.selectedCells[1]).toBe(2);
-    });
-  });
-
-  describe('Has disabled cells', () => {
-    it('Should not have disabled cells selected', () => {
-      const gameState = new KyudokuGameState();
-
-      const puzzle: Puzzle = new Puzzle([
-        [new Cell(4, CellState.DISABLED), new Cell(8, CellState.DISABLED)]
-      ]);
-
-      gameState.initialize(puzzle);
-
-      for (let i = 1; i <= 2; i++) {
-        const playInfo = new KyudokuPlayInfo({
-          rowValid: true,
-          columnValid: true,
-          coordinates: {
-            row: 1,
-            column: 2
-          },
-          cell: new Cell(i, CellState.SELECTED)
-        });
-
-        gameState.update(playInfo);
-      }
-
-      expect(gameState.hasDisabledCellsSelected()).toBeFalsy();
-    });
-
-    it('Should have disabled cells selected', () => {
-      const gameState = new KyudokuGameState();
-
-      const puzzle: Puzzle = new Puzzle([
-        [new Cell(4, CellState.DISABLED), new Cell(8, CellState.DISABLED)]
-      ]);
-
-      gameState.initialize(puzzle);
-
-      for (let i = 1; i <= AXIS_MAX_SUM_VALUE; i++) {
-        const playInfo = new KyudokuPlayInfo({
-          rowValid: true,
-          columnValid: true,
-          coordinates: {
-            row: 1,
-            column: 2
-          },
-          cell: new Cell(i, CellState.SELECTED)
-        });
-
-        gameState.update(playInfo);
-      }
-
-      expect(gameState.hasDisabledCellsSelected()).toBeTruthy();
     });
   });
 });
