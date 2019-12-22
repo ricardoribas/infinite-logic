@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* inifinitelogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* inifinitelogicTests.m */; };
+		00E356F31AD99517003FC87E /* infinitelogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* infinitelogicTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1FC7A8E27E489878258C6873 /* libPods-inifinitelogic-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F2F214070A24457E753F09 /* libPods-inifinitelogic-tvOS.a */; };
+		1FC7A8E27E489878258C6873 /* libPods-infinitelogic-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F2F214070A24457E753F09 /* libPods-infinitelogic-tvOS.a */; };
+		253FB6B023AFD839007D7F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 253FB6AF23AFD839007D7F3E /* GoogleService-Info.plist */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* inifinitelogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* inifinitelogicTests.m */; };
-		38B5377AB80B79DE0AA1EBB7 /* libPods-inifinitelogic-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0971EEFEE8AD89AD514E46A /* libPods-inifinitelogic-tvOSTests.a */; };
-		5D40810F02C85C0A997EC851 /* libPods-inifinitelogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0B1638C199E06BBA6AFFC4 /* libPods-inifinitelogicTests.a */; };
-		BDFBBA177837E206D6D5BE39 /* libPods-inifinitelogic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E500D9D832343ACFA2987625 /* libPods-inifinitelogic.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* infinitelogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* infinitelogicTests.m */; };
+		38B5377AB80B79DE0AA1EBB7 /* libPods-infinitelogic-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0971EEFEE8AD89AD514E46A /* libPods-infinitelogic-tvOSTests.a */; };
+		5D40810F02C85C0A997EC851 /* libPods-infinitelogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0B1638C199E06BBA6AFFC4 /* libPods-infinitelogicTests.a */; };
+		BDFBBA177837E206D6D5BE39 /* libPods-infinitelogic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E500D9D832343ACFA2987625 /* libPods-infinitelogic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +29,14 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = inifinitelogic;
+			remoteInfo = infinitelogic;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "inifinitelogic-tvOS";
+			remoteInfo = "infinitelogic-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,30 +44,31 @@
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* infinitelogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = infinitelogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* inifinitelogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = inifinitelogicTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* infinitelogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = infinitelogicTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Infinite Logic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Infinite Logic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = inifinitelogic/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = inifinitelogic/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = infinitelogic/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = infinitelogic/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = inifinitelogic/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = inifinitelogic/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = inifinitelogic/main.m; sourceTree = "<group>"; };
-		1A778A4A90F31E35EE630045 /* Pods-inifinitelogic-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogic-tvOSTests/Pods-inifinitelogic-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2A0B1638C199E06BBA6AFFC4 /* libPods-inifinitelogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-inifinitelogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = infinitelogic/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = infinitelogic/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = infinitelogic/main.m; sourceTree = "<group>"; };
+		1A778A4A90F31E35EE630045 /* Pods-infinitelogic-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogic-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-infinitelogic-tvOSTests/Pods-infinitelogic-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		253FB6AF23AFD839007D7F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "infinitelogic/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2A0B1638C199E06BBA6AFFC4 /* libPods-infinitelogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infinitelogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* infinitelogic-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "infinitelogic-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* infinitelogic-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "infinitelogic-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AE56D9C7BF3B044194E2A7A /* Pods-inifinitelogic-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogic-tvOS/Pods-inifinitelogic-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6DE8A43F2A437508D11A64BE /* Pods-inifinitelogic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogic/Pods-inifinitelogic.debug.xcconfig"; sourceTree = "<group>"; };
-		7D843075EBFA465FFEF91AF5 /* Pods-inifinitelogicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogicTests.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogicTests/Pods-inifinitelogicTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8AD7AD5BD0569744D8E6B657 /* Pods-inifinitelogic-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-inifinitelogic-tvOSTests/Pods-inifinitelogic-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		C0971EEFEE8AD89AD514E46A /* libPods-inifinitelogic-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-inifinitelogic-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8F2F214070A24457E753F09 /* libPods-inifinitelogic-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-inifinitelogic-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E500D9D832343ACFA2987625 /* libPods-inifinitelogic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-inifinitelogic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAAA0C2F9DF076A77EFE7AA9 /* Pods-inifinitelogic-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic-tvOS.release.xcconfig"; path = "Target Support Files/Pods-inifinitelogic-tvOS/Pods-inifinitelogic-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		6AE56D9C7BF3B044194E2A7A /* Pods-infinitelogic-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogic-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-infinitelogic-tvOS/Pods-infinitelogic-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6DE8A43F2A437508D11A64BE /* Pods-infinitelogic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogic.debug.xcconfig"; path = "Target Support Files/Pods-infinitelogic/Pods-infinitelogic.debug.xcconfig"; sourceTree = "<group>"; };
+		7D843075EBFA465FFEF91AF5 /* Pods-infinitelogicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogicTests.debug.xcconfig"; path = "Target Support Files/Pods-infinitelogicTests/Pods-infinitelogicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8AD7AD5BD0569744D8E6B657 /* Pods-infinitelogic-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogic-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-infinitelogic-tvOSTests/Pods-infinitelogic-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0971EEFEE8AD89AD514E46A /* libPods-infinitelogic-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infinitelogic-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8F2F214070A24457E753F09 /* libPods-infinitelogic-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infinitelogic-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E500D9D832343ACFA2987625 /* libPods-infinitelogic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infinitelogic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAAA0C2F9DF076A77EFE7AA9 /* Pods-infinitelogic-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogic-tvOS.release.xcconfig"; path = "Target Support Files/Pods-infinitelogic-tvOS/Pods-infinitelogic-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		ED60511C4F2FCFBF58F7C036 /* Pods-inifinitelogic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic.release.xcconfig"; path = "Target Support Files/Pods-inifinitelogic/Pods-inifinitelogic.release.xcconfig"; sourceTree = "<group>"; };
-		F11B470A3294F4F575D3C74E /* Pods-inifinitelogicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogicTests.release.xcconfig"; path = "Target Support Files/Pods-inifinitelogicTests/Pods-inifinitelogicTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED60511C4F2FCFBF58F7C036 /* Pods-infinitelogic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogic.release.xcconfig"; path = "Target Support Files/Pods-infinitelogic/Pods-infinitelogic.release.xcconfig"; sourceTree = "<group>"; };
+		F11B470A3294F4F575D3C74E /* Pods-infinitelogicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitelogicTests.release.xcconfig"; path = "Target Support Files/Pods-infinitelogicTests/Pods-infinitelogicTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D40810F02C85C0A997EC851 /* libPods-inifinitelogicTests.a in Frameworks */,
+				5D40810F02C85C0A997EC851 /* libPods-infinitelogicTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFBBA177837E206D6D5BE39 /* libPods-inifinitelogic.a in Frameworks */,
+				BDFBBA177837E206D6D5BE39 /* libPods-infinitelogic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC7A8E27E489878258C6873 /* libPods-inifinitelogic-tvOS.a in Frameworks */,
+				1FC7A8E27E489878258C6873 /* libPods-infinitelogic-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +100,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B5377AB80B79DE0AA1EBB7 /* libPods-inifinitelogic-tvOSTests.a in Frameworks */,
+				38B5377AB80B79DE0AA1EBB7 /* libPods-infinitelogic-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* inifinitelogicTests */ = {
+		00E356EF1AD99517003FC87E /* infinitelogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* inifinitelogicTests.m */,
+				00E356F21AD99517003FC87E /* infinitelogicTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = inifinitelogicTests;
+			path = infinitelogicTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,9 +124,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* inifinitelogic */ = {
+		13B07FAE1A68108700A75B9A /* infinitelogic */ = {
 			isa = PBXGroup;
 			children = (
+				253FB6AF23AFD839007D7F3E /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -133,7 +136,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = inifinitelogic;
+			name = infinitelogic;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -141,10 +144,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				E500D9D832343ACFA2987625 /* libPods-inifinitelogic.a */,
-				C8F2F214070A24457E753F09 /* libPods-inifinitelogic-tvOS.a */,
-				C0971EEFEE8AD89AD514E46A /* libPods-inifinitelogic-tvOSTests.a */,
-				2A0B1638C199E06BBA6AFFC4 /* libPods-inifinitelogicTests.a */,
+				E500D9D832343ACFA2987625 /* libPods-infinitelogic.a */,
+				C8F2F214070A24457E753F09 /* libPods-infinitelogic-tvOS.a */,
+				C0971EEFEE8AD89AD514E46A /* libPods-infinitelogic-tvOSTests.a */,
+				2A0B1638C199E06BBA6AFFC4 /* libPods-infinitelogicTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +162,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* inifinitelogic */,
+				13B07FAE1A68108700A75B9A /* infinitelogic */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* inifinitelogicTests */,
+				00E356EF1AD99517003FC87E /* infinitelogicTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				AFA9CC2FFBA35C26FA239097 /* Pods */,
@@ -185,14 +188,14 @@
 		AFA9CC2FFBA35C26FA239097 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6DE8A43F2A437508D11A64BE /* Pods-inifinitelogic.debug.xcconfig */,
-				ED60511C4F2FCFBF58F7C036 /* Pods-inifinitelogic.release.xcconfig */,
-				6AE56D9C7BF3B044194E2A7A /* Pods-inifinitelogic-tvOS.debug.xcconfig */,
-				EAAA0C2F9DF076A77EFE7AA9 /* Pods-inifinitelogic-tvOS.release.xcconfig */,
-				1A778A4A90F31E35EE630045 /* Pods-inifinitelogic-tvOSTests.debug.xcconfig */,
-				8AD7AD5BD0569744D8E6B657 /* Pods-inifinitelogic-tvOSTests.release.xcconfig */,
-				7D843075EBFA465FFEF91AF5 /* Pods-inifinitelogicTests.debug.xcconfig */,
-				F11B470A3294F4F575D3C74E /* Pods-inifinitelogicTests.release.xcconfig */,
+				6DE8A43F2A437508D11A64BE /* Pods-infinitelogic.debug.xcconfig */,
+				ED60511C4F2FCFBF58F7C036 /* Pods-infinitelogic.release.xcconfig */,
+				6AE56D9C7BF3B044194E2A7A /* Pods-infinitelogic-tvOS.debug.xcconfig */,
+				EAAA0C2F9DF076A77EFE7AA9 /* Pods-infinitelogic-tvOS.release.xcconfig */,
+				1A778A4A90F31E35EE630045 /* Pods-infinitelogic-tvOSTests.debug.xcconfig */,
+				8AD7AD5BD0569744D8E6B657 /* Pods-infinitelogic-tvOSTests.release.xcconfig */,
+				7D843075EBFA465FFEF91AF5 /* Pods-infinitelogicTests.debug.xcconfig */,
+				F11B470A3294F4F575D3C74E /* Pods-infinitelogicTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -215,7 +218,7 @@
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
 			name = infinitelogicTests;
-			productName = inifinitelogicTests;
+			productName = infinitelogicTests;
 			productReference = 00E356EE1AD99517003FC87E /* infinitelogicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -229,13 +232,17 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				25D7AB6C23AFC87500DF0457 /* ShellScript */,
+				684184A3F84FBFDF5E1FDCDC /* [CP-User] [RNFB] Core Configuration */,
+				D859B65879AB56FFDE23F68F /* [CP-User] [RNFB] Crashlytics Configuration */,
+				C0A5629A9ADC539EDFB455E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = infinitelogic;
-			productName = inifinitelogic;
+			productName = infinitelogic;
 			productReference = 13B07F961A680F5B00A75B9A /* Infinite Logic.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -255,7 +262,7 @@
 			dependencies = (
 			);
 			name = "infinitelogic-tvOS";
-			productName = "inifinitelogic-tvOS";
+			productName = "infinitelogic-tvOS";
 			productReference = 2D02E47B1E0B4A5D006451C7 /* infinitelogic-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -274,7 +281,7 @@
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
 			name = "infinitelogic-tvOSTests";
-			productName = "inifinitelogic-tvOSTests";
+			productName = "infinitelogic-tvOSTests";
 			productReference = 2D02E4901E0B4A5D006451C7 /* infinitelogic-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -338,6 +345,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				253FB6B023AFD839007D7F3E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +381,23 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\nexport EXTRA_PACKAGER_ARGS=\"--entry-file packages/mobile/index.js\"\n../../../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		25D7AB6C23AFC87500DF0457 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +411,16 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../../../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		684184A3F84FBFDF5E1FDCDC /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    _JSON_OUTPUT_BASE64=$(python -c 'import json,sys,base64;print(base64.b64encode(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"').read())['${_JSON_ROOT}'])))' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes usful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"firebase_crashlytics_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\n\n  # config.admob_delay_app_measurement_init\n  _ADMOB_DELAY_APP_MEASUREMENT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"admob_delay_app_measurement_init\")\n  if [[ $_ADMOB_DELAY_APP_MEASUREMENT == \"true\" ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GADDelayAppMeasurementInit\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"YES\")\n  fi\n\n  # config.admob_ios_app_id\n  _ADMOB_IOS_APP_ID=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"admob_ios_app_id\")\n  if [[ $_ADMOB_IOS_APP_ID ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GADApplicationIdentifier\")\n    _PLIST_ENTRY_TYPES+=(\"string\")\n    _PLIST_ENTRY_VALUES+=(\"$_ADMOB_IOS_APP_ID\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in ${_TARGET_PLIST} ${_DSYM_PLIST} ; do\n  if [[ -f ${plist} ]]; then\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n\n\n\n";
 		};
 		900E210A21FBF7FDB44F6AFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -402,11 +437,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-inifinitelogic-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-infinitelogic-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0A5629A9ADC539EDFB455E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-infinitelogic/Pods-infinitelogic-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/PersonalizedAdConsent/PersonalizedAdConsent.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PersonalizedAdConsent.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-infinitelogic/Pods-infinitelogic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D55DF6F696A5CE9116B13F21 /* [CP] Check Pods Manifest.lock */ = {
@@ -424,12 +477,22 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-inifinitelogic-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-infinitelogic-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D859B65879AB56FFDE23F68F /* [CP-User] [RNFB] Crashlytics Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] [RNFB] Crashlytics Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\nif [[ ${PODS_ROOT} ]]; then\n  echo \"info: Exec Fabric Run from Pods\"\n  \"${PODS_ROOT}/Fabric/run\"\nelse\n  echo \"info: Exec Fabric Run from framework\"\n  \"${PROJECT_DIR}/Fabric.framework/run\"\nfi\n";
 		};
 		F4EF5BD16D54C40C08846994 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -446,7 +509,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-inifinitelogicTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-infinitelogicTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -506,7 +569,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-inifinitelogic-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-infinitelogic-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,7 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* inifinitelogicTests.m in Sources */,
+				00E356F31AD99517003FC87E /* infinitelogicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* inifinitelogicTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* infinitelogicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +635,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = inifinitelogic;
+			path = infinitelogic;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -580,14 +643,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D843075EBFA465FFEF91AF5 /* Pods-inifinitelogicTests.debug.xcconfig */;
+			baseConfigurationReference = 7D843075EBFA465FFEF91AF5 /* Pods-infinitelogicTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = inifinitelogicTests/Info.plist;
+				INFOPLIST_FILE = infinitelogicTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -597,17 +660,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic.app/infinitelogic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Infinite Logic.app/Infinite Logic";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F11B470A3294F4F575D3C74E /* Pods-inifinitelogicTests.release.xcconfig */;
+			baseConfigurationReference = F11B470A3294F4F575D3C74E /* Pods-infinitelogicTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = inifinitelogicTests/Info.plist;
+				INFOPLIST_FILE = infinitelogicTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -617,19 +680,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic.app/infinitelogic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Infinite Logic.app/Infinite Logic";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DE8A43F2A437508D11A64BE /* Pods-inifinitelogic.debug.xcconfig */;
+			baseConfigurationReference = 6DE8A43F2A437508D11A64BE /* Pods-infinitelogic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = inifinitelogic/Info.plist;
+				INFOPLIST_FILE = infinitelogic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -643,12 +707,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED60511C4F2FCFBF58F7C036 /* Pods-inifinitelogic.release.xcconfig */;
+			baseConfigurationReference = ED60511C4F2FCFBF58F7C036 /* Pods-infinitelogic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = inifinitelogic/Info.plist;
+				INFOPLIST_FILE = infinitelogic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -662,9 +727,9 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AE56D9C7BF3B044194E2A7A /* Pods-inifinitelogic-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 6AE56D9C7BF3B044194E2A7A /* Pods-infinitelogic-tvOS.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -673,14 +738,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "inifinitelogic-tvOS/Info.plist";
+				INFOPLIST_FILE = "infinitelogic-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.inifinitelogic-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.infinitelogic-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -690,9 +755,9 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAAA0C2F9DF076A77EFE7AA9 /* Pods-inifinitelogic-tvOS.release.xcconfig */;
+			baseConfigurationReference = EAAA0C2F9DF076A77EFE7AA9 /* Pods-infinitelogic-tvOS.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -701,14 +766,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "inifinitelogic-tvOS/Info.plist";
+				INFOPLIST_FILE = "infinitelogic-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.inifinitelogic-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.infinitelogic-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -718,7 +783,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A778A4A90F31E35EE630045 /* Pods-inifinitelogic-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 1A778A4A90F31E35EE630045 /* Pods-infinitelogic-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -728,14 +793,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "inifinitelogic-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "infinitelogic-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.inifinitelogic-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.infinitelogic-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic-tvOS.app/infinitelogic-tvOS";
@@ -745,7 +810,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AD7AD5BD0569744D8E6B657 /* Pods-inifinitelogic-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 8AD7AD5BD0569744D8E6B657 /* Pods-infinitelogic-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -755,14 +820,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "inifinitelogic-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "infinitelogic-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.inifinitelogic-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.infinitelogic-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic-tvOS.app/infinitelogic-tvOS";
