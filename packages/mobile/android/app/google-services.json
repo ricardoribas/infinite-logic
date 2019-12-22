@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "724202094499",
+    "firebase_url": "https://infinite-logic.firebaseio.com",
+    "project_id": "infinite-logic",
+    "storage_bucket": "infinite-logic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724202094499:android:ba4c8b8c49c8fb0b4fa416",
+        "android_client_info": {
+          "package_name": "com.ricardo.infinitelogic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724202094499-req43b8c6f0dd8l2qevsdt0a2cuivdfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdf8G3hMSLxvof2ikZgD9RS-vPF9MVgEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724202094499-req43b8c6f0dd8l2qevsdt0a2cuivdfb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

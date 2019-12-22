@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* inifinitelogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inifinitelogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* infinitelogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = infinitelogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* inifinitelogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = inifinitelogicTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Infinite Logic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Infinite Logic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,8 +53,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = inifinitelogic/main.m; sourceTree = "<group>"; };
 		1A778A4A90F31E35EE630045 /* Pods-inifinitelogic-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogic-tvOSTests/Pods-inifinitelogic-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A0B1638C199E06BBA6AFFC4 /* libPods-inifinitelogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-inifinitelogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* inifinitelogic-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inifinitelogic-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* inifinitelogic-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "inifinitelogic-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* infinitelogic-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "infinitelogic-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* infinitelogic-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "infinitelogic-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE56D9C7BF3B044194E2A7A /* Pods-inifinitelogic-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogic-tvOS/Pods-inifinitelogic-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6DE8A43F2A437508D11A64BE /* Pods-inifinitelogic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogic.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogic/Pods-inifinitelogic.debug.xcconfig"; sourceTree = "<group>"; };
 		7D843075EBFA465FFEF91AF5 /* Pods-inifinitelogicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inifinitelogicTests.debug.xcconfig"; path = "Target Support Files/Pods-inifinitelogicTests/Pods-inifinitelogicTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,9 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* Infinite Logic.app */,
-				00E356EE1AD99517003FC87E /* inifinitelogicTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* inifinitelogic-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* inifinitelogic-tvOSTests.xctest */,
+				00E356EE1AD99517003FC87E /* infinitelogicTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* infinitelogic-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* infinitelogic-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* inifinitelogicTests */ = {
+		00E356ED1AD99517003FC87E /* infinitelogicTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "inifinitelogicTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "infinitelogicTests" */;
 			buildPhases = (
 				F4EF5BD16D54C40C08846994 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -214,14 +214,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = inifinitelogicTests;
+			name = infinitelogicTests;
 			productName = inifinitelogicTests;
-			productReference = 00E356EE1AD99517003FC87E /* inifinitelogicTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* infinitelogicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* inifinitelogic */ = {
+		13B07F861A680F5B00A75B9A /* infinitelogic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "inifinitelogic" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "infinitelogic" */;
 			buildPhases = (
 				D55DF6F696A5CE9116B13F21 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -234,14 +234,14 @@
 			);
 			dependencies = (
 			);
-			name = inifinitelogic;
+			name = infinitelogic;
 			productName = inifinitelogic;
 			productReference = 13B07F961A680F5B00A75B9A /* Infinite Logic.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* inifinitelogic-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* infinitelogic-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "inifinitelogic-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "infinitelogic-tvOS" */;
 			buildPhases = (
 				900E210A21FBF7FDB44F6AFB /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -254,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = "inifinitelogic-tvOS";
+			name = "infinitelogic-tvOS";
 			productName = "inifinitelogic-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* inifinitelogic-tvOS.app */;
+			productReference = 2D02E47B1E0B4A5D006451C7 /* infinitelogic-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* inifinitelogic-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* infinitelogic-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "inifinitelogic-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "infinitelogic-tvOSTests" */;
 			buildPhases = (
 				FEB5A97818A790C38B618CAD /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -273,9 +273,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "inifinitelogic-tvOSTests";
+			name = "infinitelogic-tvOSTests";
 			productName = "inifinitelogic-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* inifinitelogic-tvOSTests.xctest */;
+			productReference = 2D02E4901E0B4A5D006451C7 /* infinitelogic-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -302,7 +302,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "inifinitelogic" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "infinitelogic" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -316,10 +316,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* inifinitelogic */,
-				00E356ED1AD99517003FC87E /* inifinitelogicTests */,
-				2D02E47A1E0B4A5D006451C7 /* inifinitelogic-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* inifinitelogic-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* infinitelogic */,
+				00E356ED1AD99517003FC87E /* infinitelogicTests */,
+				2D02E47A1E0B4A5D006451C7 /* infinitelogic-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* infinitelogic-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -555,12 +555,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* inifinitelogic */;
+			target = 13B07F861A680F5B00A75B9A /* infinitelogic */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* inifinitelogic-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* infinitelogic-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -597,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inifinitelogic.app/inifinitelogic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic.app/infinitelogic";
 			};
 			name = Debug;
 		};
@@ -617,7 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inifinitelogic.app/inifinitelogic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic.app/infinitelogic";
 			};
 			name = Release;
 		};
@@ -738,7 +738,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.inifinitelogic-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inifinitelogic-tvOS.app/inifinitelogic-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic-tvOS.app/infinitelogic-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -765,7 +765,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.inifinitelogic-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inifinitelogic-tvOS.app/inifinitelogic-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinitelogic-tvOS.app/infinitelogic-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -874,7 +874,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "inifinitelogicTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "infinitelogicTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -883,7 +883,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "inifinitelogic" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "infinitelogic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -892,7 +892,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "inifinitelogic-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "infinitelogic-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -901,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "inifinitelogic-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "infinitelogic-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -910,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "inifinitelogic" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "infinitelogic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

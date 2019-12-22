@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:inifinitelogic.xcodeproj">
+      location = "group:/Users/ricardoribas/Code/personal/infinite-logic/packages/mobile/ios/infinitelogic.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
