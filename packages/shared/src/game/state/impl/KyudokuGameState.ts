@@ -51,8 +51,6 @@ export default class KyudokuGameState extends AbstractGameState<
   }
 
   addSelectedCell(cell: Cell, coordinates: PlayCoordinates): void {
-    debugger;
-
     this._selectedCells[getCellIndex(cell)].push(coordinates);
   }
 
