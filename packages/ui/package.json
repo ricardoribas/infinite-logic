@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@infinite/eslint-config-node": "1.0.0",
+    "@infinite/firebase": "1.0.0",
     "@types/react-test-renderer": "^16.9.1",
     "eslint-plugin-react": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.7.4"

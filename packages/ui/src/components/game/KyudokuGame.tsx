@@ -14,11 +14,12 @@ import Cell from '@infinite/shared/src/models/cell';
 import KyudokuGameManager from '@infinite/shared/src/game/manager/impl/KyudokuGameManager';
 import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
 import Grid from '@infinite/ui/src/components/grid';
-import PuzzleState from '@infinite/shared/src/enums/PuzzleState';
+import { hasWon } from '@infinite/shared/src/utils/Puzzle';
 
 type Props = {
   puzzle: Puzzle;
   style: ViewStyle | ViewStyle[];
+  onWin: Function;
 };
 
 function getInvalidRowRectangle(
@@ -89,7 +90,11 @@ function getInvalidColumnRectangle(
   return columnRectangles;
 }
 
-const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
+const KyudokuGame: FunctionComponent<Props> = ({
+  puzzle,
+  style,
+  onWin
+}: Props) => {
   const nRows = puzzle.cells.length;
   const nColumns = puzzle.cells[0].length;
   const [currentPuzzle, setPuzzle] = useState<Puzzle>(puzzle);
@@ -102,10 +107,7 @@ const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
 
   return (
     <>
-      <Text>
-        Finished{' '}
-        {currentPuzzle.state === PuzzleState.FINISHED ? 'true' : 'false'}
-      </Text>
+      <Text>Finished {hasWon(currentPuzzle) ? 'true' : 'false'}</Text>
       <View style={style}>
         {layoutInfo &&
           getInvalidColumnRectangle(layoutInfo, gameManager, currentPuzzle)}
@@ -140,7 +142,7 @@ const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
 
             return (
               <TouchableOpacity
-                disabled={isDisabled(cell)}
+                disabled={isDisabled(cell) || hasWon(currentPuzzle)}
                 onPress={(): void => {
                   const newPuzzle = gameManager.play(
                     {
@@ -149,6 +151,8 @@ const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
                     },
                     currentPuzzle
                   );
+
+                  hasWon(newPuzzle) && onWin();
 
                   setPuzzle(newPuzzle);
                 }}
@@ -185,4 +189,4 @@ const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
   );
 };
 
-export default KyudokuGrid;
+export default KyudokuGame;
