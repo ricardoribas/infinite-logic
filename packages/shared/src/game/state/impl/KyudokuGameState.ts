@@ -17,8 +17,8 @@ function getCellIndex(cell: Cell): number {
 export default class KyudokuGameState extends AbstractGameState<
   KyudokuPlayInfo
 > {
-  private _rowStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
-  private _columnStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
+  _rowStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
+  _columnStates: boolean[] = Array(AXIS_MAX_SUM_VALUE).fill(true);
   private _disabledCells: number[] = Array(AXIS_MAX_SUM_VALUE).fill(0);
   private _selectedCells: PlayCoordinates[][] = Array.from(
     Array(AXIS_MAX_SUM_VALUE),

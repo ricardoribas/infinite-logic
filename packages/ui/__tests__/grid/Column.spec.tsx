@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import ShallowRenderer from 'react-test-renderer/shallow';
-import Column from '@infinite/components/src/grid/Column';
+import Column from '@infinite/ui/src/components/grid/Column';
 
 describe('Column Component', () => {
   it('Render with some children', () => {

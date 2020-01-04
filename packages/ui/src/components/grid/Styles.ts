@@ -1,8 +1,7 @@
-import { GRID_OUTER_BORDER_COLOR } from '@infinite/components/src/constants/Colors';
-import { GRID_DEFAULT_BORDER_WIDTH } from '@infinite/components/src/constants/UI';
+import { GRID_OUTER_BORDER_COLOR } from '@infinite/ui/src/constants/Colors';
+import { GRID_DEFAULT_BORDER_WIDTH } from '@infinite/ui/src/constants/UI';
 
 export const GRID = {
-  borderLeftWidth: GRID_DEFAULT_BORDER_WIDTH,
   borderTopWidth: GRID_DEFAULT_BORDER_WIDTH,
   borderRightWidth: GRID_DEFAULT_BORDER_WIDTH,
   borderColor: GRID_OUTER_BORDER_COLOR
@@ -13,4 +12,6 @@ export const GRID_ROWS = {
   borderBottomColor: GRID_OUTER_BORDER_COLOR
 };
 
-export const GRID_COLUMNS = {};
+export const GRID_COLUMNS = {
+  borderLeftWidth: GRID_DEFAULT_BORDER_WIDTH
+};

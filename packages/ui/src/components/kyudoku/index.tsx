@@ -13,7 +13,7 @@ import { isDisabled } from '@infinite/shared/src/utils/Cell';
 import Cell from '@infinite/shared/src/models/cell';
 import KyudokuGameManager from '@infinite/shared/src/game/manager/impl/KyudokuGameManager';
 import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
-import Grid from '@infinite/components/src/grid';
+import Grid from '@infinite/ui/src/components/grid';
 import PuzzleState from '@infinite/shared/src/enums/PuzzleState';
 
 type Props = {
@@ -106,14 +106,7 @@ const KyudokuGrid: FunctionComponent<Props> = ({ puzzle, style }: Props) => {
         Finished{' '}
         {currentPuzzle.state === PuzzleState.FINISHED ? 'true' : 'false'}
       </Text>
-      <View
-        style={[
-          style,
-          {
-            backgroundColor: 'yellow'
-          }
-        ]}
-      >
+      <View style={style}>
         {layoutInfo &&
           getInvalidColumnRectangle(layoutInfo, gameManager, currentPuzzle)}
         {layoutInfo &&

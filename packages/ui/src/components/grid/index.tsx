@@ -3,7 +3,7 @@ import { View, ViewStyle, LayoutChangeEvent, StyleProp } from 'react-native';
 
 import Row from './Row';
 import Column from './Column';
-import { GRID as GRID_STYLES, GRID_ROWS } from './Styles';
+import { GRID as GRID_STYLES, GRID_ROWS, GRID_COLUMNS } from './Styles';
 
 type Props = {
   rows: number;
@@ -24,9 +24,12 @@ function renderRow(
     columns.push(
       <Column
         key={`column_${String(i)}`}
-        style={{
-          flex: 1
-        }}
+        style={[
+          GRID_COLUMNS,
+          {
+            flex: 1
+          }
+        ]}
       >
         {renderCell(row, i)}
       </Column>

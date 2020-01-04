@@ -1,9 +1,11 @@
 import AbstractGameValidator from '@infinite/shared/src/game/validator/AbstractGameValidator';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
 import Cell from '@infinite/shared/src/models/cell';
+import KyudokuGameState from '@infinite/shared/src/game/state/impl/KyudokuGameState';
+import KyudokuPlayInfo from '@infinite/shared/src/models/game/impl/KyudokuPlayInfo';
 
 describe('AbstractGame Validaator', () => {
-  let gameValidator: AbstractGameValidator;
+  let gameValidator: AbstractGameValidator<KyudokuGameState, KyudokuPlayInfo>;
 
   beforeEach(() => {
     const puzzleCells: Cell[][] = [];

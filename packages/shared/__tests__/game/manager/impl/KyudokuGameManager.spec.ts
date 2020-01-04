@@ -6,14 +6,13 @@ import Cell from '@infinite/shared/src/models/cell';
 import CellState from '@infinite/shared/src/enums/CellState';
 import PuzzleState from '@infinite/shared/src/enums/PuzzleState';
 
-jest.mock('@infinite/shared/src/game/state/impl/KyudokuGameState');
-
 describe('Kyudoku Game Manager', () => {
   it('Should initialize the board state after creation', () => {
+    jest.spyOn(KyudokuGameState.prototype, 'initialize');
+
     const puzzle = new Puzzle([]);
     const gameManager = new KyudokuGameManager(puzzle);
 
-    expect(KyudokuGameState).toHaveBeenCalled();
     expect(gameManager.gameState).toBeDefined();
     expect(gameManager.gameState.initialize).toHaveBeenCalledWith(puzzle);
   });
