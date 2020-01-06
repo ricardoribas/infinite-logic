@@ -96,7 +96,6 @@ const Game: FunctionComponent<{}> = () => {
       >
         <Text category="s1">Fast</Text>
         <Text category="s1">Mistakes 0/3</Text>
-        <Text category="s1">icon</Text>
         <StopWatch />
       </View>
       <View

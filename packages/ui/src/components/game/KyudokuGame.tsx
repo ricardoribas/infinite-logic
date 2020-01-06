@@ -107,7 +107,6 @@ const KyudokuGame: FunctionComponent<Props> = ({
 
   return (
     <>
-      <Text>Finished {hasWon(currentPuzzle) ? 'true' : 'false'}</Text>
       <View style={style}>
         {layoutInfo &&
           getInvalidColumnRectangle(layoutInfo, gameManager, currentPuzzle)}
