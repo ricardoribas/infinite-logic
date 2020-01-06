@@ -13,6 +13,14 @@ export function getNextState(cell: Cell): CellState {
   return STATES_SEQUENCE[(currentSequenceIndex + 1) % STATES_SEQUENCE.length];
 }
 
+export function getPreviousState(cell: Cell): CellState {
+  const currentSequenceIndex = STATES_SEQUENCE.indexOf(cell.state);
+
+  return STATES_SEQUENCE[
+    (currentSequenceIndex - 1 + 3) % STATES_SEQUENCE.length
+  ];
+}
+
 export function isDisabled(cell: Cell): boolean {
   return cell.state === CellState.DISABLED;
 }
@@ -27,5 +35,6 @@ export function hasState(cell: Cell): boolean {
 
 export default {
   getNextState,
+  getPreviousState,
   isSelected
 };

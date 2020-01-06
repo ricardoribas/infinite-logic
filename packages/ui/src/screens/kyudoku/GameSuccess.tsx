@@ -1,7 +1,6 @@
-import React, { FunctionComponent, useEffect, Fragment } from 'react';
+import React, { FunctionComponent, Fragment } from 'react';
 import { View } from 'react-native';
 
-// import { getMessage } from '@infinite/shared/src/services/vocabulary';
 import { getMessage } from '@infinite/shared/src/services/vocabulary';
 import GameSuccessFactory from '@infinite/ui/src/factories/game/Success';
 import Text from '@infinite/ui/src/components/text';

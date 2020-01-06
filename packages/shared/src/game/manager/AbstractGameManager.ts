@@ -12,12 +12,19 @@ export default class AbstractGameManager<
 
   protected _gameState: U;
 
+  protected _gameSequence: K[];
+
   constructor(protected GameStateClazz: new () => U) {
     this._gameState = new GameStateClazz();
+    this._gameSequence = [];
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   play(action: T, puzzle: Puzzle): Puzzle {
+    return this.updatePlay(action, puzzle);
+  }
+
+  updatePlay(action: T, puzzle: Puzzle): Puzzle {
     this.lastPlay = action;
 
     return puzzle;

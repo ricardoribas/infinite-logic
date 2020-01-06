@@ -15,6 +15,8 @@ import KyudokuGameManager from '@infinite/shared/src/game/manager/impl/KyudokuGa
 import KyudokuCellStyleFactory from '@infinite/shared/src/factories/cells/KyudokuCellStyle';
 import Grid from '@infinite/ui/src/components/grid';
 import { hasWon } from '@infinite/shared/src/utils/Puzzle';
+import { getMessage } from '@infinite/shared/src/services/vocabulary';
+import Button from '@infinite/ui/src/components/button';
 
 type Props = {
   puzzle: Puzzle;
@@ -107,7 +109,14 @@ const KyudokuGame: FunctionComponent<Props> = ({
 
   return (
     <>
-      <View style={style}>
+      <View
+        style={[
+          style,
+          {
+            marginBottom: 20
+          }
+        ]}
+      >
         {layoutInfo &&
           getInvalidColumnRectangle(layoutInfo, gameManager, currentPuzzle)}
         {layoutInfo &&
@@ -182,6 +191,32 @@ const KyudokuGame: FunctionComponent<Props> = ({
             );
           }}
         />
+      </View>
+      <View
+        style={{
+          flexDirection: 'row',
+          height: 50,
+          paddingLeft: 10,
+          paddingRight: 20,
+          marginBottom: 20,
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <Button
+          iconName="undo-outline"
+          style={{
+            marginRight: 10
+          }}
+          onPress={(): void => {
+            const newPuzzle = gameManager.undo(currentPuzzle);
+
+            setPuzzle(newPuzzle);
+          }}
+        >
+          {getMessage('gameUndo')}
+        </Button>
+        <Button iconName="bulb-outline">{getMessage('gameHint')}</Button>
       </View>
     </>
   );
