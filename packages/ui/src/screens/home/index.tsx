@@ -19,7 +19,7 @@ const NavigationDrawer = createDrawerNavigator(
     KyudokuGameSuccess
   },
   {
-    initialRouteName: 'KyudokuGameSuccess',
+    initialRouteName: 'Home',
     contentComponent: () => <Sidebar />
   }
 );

@@ -12,6 +12,7 @@ import {
 
 type AdProps = {
   onAdLoaded?: Function;
+  onAdClosed?: Function;
   onAdFailedToLoad?: Function;
   onAdRewarded?: Function;
 };
@@ -49,6 +50,8 @@ export function createInterstitialAdRequest(props: AdProps): void {
       currentInterstitialInstance.show();
     } else if (type === AdEventType.ERROR) {
       props.onAdFailedToLoad && props.onAdFailedToLoad();
+    } else if (type === AdEventType.CLOSED) {
+      props.onAdClosed && props.onAdClosed();
     }
   });
 }

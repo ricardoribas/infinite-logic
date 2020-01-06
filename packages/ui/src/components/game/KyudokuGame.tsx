@@ -164,7 +164,6 @@ const KyudokuGame: FunctionComponent<Props> = ({
                 <View
                   style={[
                     {
-                      padding: 10,
                       alignItems: 'center',
                       justifyContent: 'center'
                     },

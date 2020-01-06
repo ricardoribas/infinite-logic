@@ -24,58 +24,69 @@ const PUZZLE_WIDTH_SCREEN_PERCENTAGE = 0.9;
 
 const KYUDOKU_PUZZLE_1 = [
   [
-    new KyudokuCell(4),
-    new KyudokuCell(4),
-    new KyudokuCell(8),
-    new KyudokuCell(6),
-    new KyudokuCell(4),
-    new KyudokuCell(5)
+    new KyudokuCell(4, CellState.BLOCKED),
+    new KyudokuCell(4, CellState.BLOCKED),
+    new KyudokuCell(8, CellState.BLOCKED),
+    new KyudokuCell(6, CellState.SELECTED),
+    new KyudokuCell(4, CellState.BLOCKED),
+    new KyudokuCell(5, CellState.BLOCKED)
   ],
   [
-    new KyudokuCell(8),
-    new KyudokuCell(5),
-    new KyudokuCell(3),
-    new KyudokuCell(2),
-    new KyudokuCell(3),
-    new KyudokuCell(1)
+    new KyudokuCell(8, CellState.BLOCKED),
+    new KyudokuCell(5, CellState.BLOCKED),
+    new KyudokuCell(3, CellState.SELECTED),
+    new KyudokuCell(2, CellState.SELECTED),
+    new KyudokuCell(3, CellState.BLOCKED),
+    new KyudokuCell(1, CellState.SELECTED)
   ],
   [
-    new KyudokuCell(4),
-    new KyudokuCell(9),
-    new KyudokuCell(5),
-    new KyudokuCell(3),
-    new KyudokuCell(6),
+    new KyudokuCell(4, CellState.BLOCKED),
+    new KyudokuCell(9, CellState.BLOCKED),
+    new KyudokuCell(5, CellState.SELECTED),
+    new KyudokuCell(3, CellState.BLOCKED),
+    new KyudokuCell(6, CellState.BLOCKED),
     new KyudokuCell(4, CellState.DISABLED)
   ],
   [
-    new KyudokuCell(8),
+    new KyudokuCell(8, CellState.BLOCKED),
     new KyudokuCell(7),
-    new KyudokuCell(7),
-    new KyudokuCell(7),
-    new KyudokuCell(9),
-    new KyudokuCell(3)
+    new KyudokuCell(7, CellState.BLOCKED),
+    new KyudokuCell(7, CellState.BLOCKED),
+    new KyudokuCell(9, CellState.BLOCKED),
+    new KyudokuCell(3, CellState.BLOCKED)
   ],
   [
-    new KyudokuCell(3),
-    new KyudokuCell(6),
-    new KyudokuCell(1),
-    new KyudokuCell(3),
-    new KyudokuCell(9),
-    new KyudokuCell(3)
+    new KyudokuCell(3, CellState.BLOCKED),
+    new KyudokuCell(6, CellState.BLOCKED),
+    new KyudokuCell(1, CellState.BLOCKED),
+    new KyudokuCell(3, CellState.BLOCKED),
+    new KyudokuCell(9, CellState.SELECTED),
+    new KyudokuCell(3, CellState.BLOCKED)
   ],
   [
-    new KyudokuCell(8),
-    new KyudokuCell(5),
-    new KyudokuCell(5),
-    new KyudokuCell(2),
-    new KyudokuCell(1),
-    new KyudokuCell(8)
+    new KyudokuCell(8, CellState.SELECTED),
+    new KyudokuCell(5, CellState.BLOCKED),
+    new KyudokuCell(5, CellState.BLOCKED),
+    new KyudokuCell(2, CellState.BLOCKED),
+    new KyudokuCell(1, CellState.BLOCKED),
+    new KyudokuCell(8, CellState.BLOCKED)
   ]
 ];
 
+function goToGameSuccess(): void {
+  goToScreen('KyudokuGameSuccess');
+}
+
 const Game: FunctionComponent<{}> = () => {
   useEffect(() => {
-    createInterstitialAdRequest({});
+    createInterstitialAdRequest({
+      onAdFailedToLoad() {
+        goToGameSuccess();
+      },
+      onAdClosed() {
+        goToGameSuccess();
+      }
+    });
     createRewardedAdRequest({});
   }, []);
 
@@ -114,7 +125,6 @@ const Game: FunctionComponent<{}> = () => {
             height
           }}
           onWin={(): void => {
-            goToScreen('KyudokuGameSuccess');
             loadInterstitial();
           }}
         />
