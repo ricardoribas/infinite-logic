@@ -21,7 +21,7 @@ export default class Home extends Component {
           }}
         >
           <Text category="h5" onPress={(): void => goToScreen('KyudokuGame')}>
-            {getMessage('appNewGame')}
+            {getMessage('gameCreate')}
           </Text>
         </View>
       </Fragment>

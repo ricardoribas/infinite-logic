@@ -10,14 +10,16 @@ import { setTopLevelNavigator } from '@infinite/shared/src/services/navigation';
 
 import Home from '@infinite/ui/src/screens/home/Home';
 import KyudokuGame from '@infinite/ui/src/screens/kyudoku/Game';
+import KyudokuGameSuccess from '@infinite/ui/src/screens/kyudoku/GameSuccess';
 
 const NavigationDrawer = createDrawerNavigator(
   {
     Home,
-    KyudokuGame
+    KyudokuGame,
+    KyudokuGameSuccess
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'KyudokuGameSuccess',
     contentComponent: () => <Sidebar />
   }
 );

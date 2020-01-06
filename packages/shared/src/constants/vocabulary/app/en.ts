@@ -1,4 +1,3 @@
 export default {
-  appName: 'Infinite Logic',
-  appNewGame: 'New Game'
+  appName: 'Infinite Logic'
 };

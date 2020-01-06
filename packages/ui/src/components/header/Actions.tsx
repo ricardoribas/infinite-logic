@@ -1,6 +1,10 @@
 import React from 'react';
 import { GestureResponderEvent } from 'react-native';
-import { TopNavigationAction, Icon } from '@ui-kitten/components';
+import {
+  TopNavigationAction,
+  Icon,
+  StyledComponentProps
+} from '@ui-kitten/components';
 
 import { toggleDrawer, goBack } from '@infinite/shared/src/services/navigation';
 import { HeaderType } from '@infinite/ui/src/shared/types/Header';

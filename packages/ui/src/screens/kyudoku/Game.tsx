@@ -1,6 +1,12 @@
 import React, { FunctionComponent, Fragment, useEffect } from 'react';
 import { View } from 'react-native';
 
+import {
+  Banner,
+  createInterstitialAdRequest,
+  createRewardedAdRequest,
+  loadInterstitial
+} from '@infinite/firebase/src/Admob';
 import KyudokuCell from '@infinite/shared/src/models/cell/impl/KyudokuCell';
 import CellState from '@infinite/shared/src/enums/CellState';
 import Puzzle from '@infinite/shared/src/models/Puzzle';
@@ -11,12 +17,8 @@ import Button from '@infinite/ui/src/components/button';
 import Header from '@infinite/ui/src/components/header';
 import { HeaderType } from '@infinite/ui/src/shared/types/Header';
 import StopWatch from '@infinite/ui/src/components/clock/StopWatch';
-import {
-  Banner,
-  createInterstitialAdRequest,
-  createRewardedAdRequest,
-  loadInterstitial
-} from '@infinite/firebase/src/Admob';
+import { goToScreen } from '@infinite/shared/src/services/navigation';
+import { getMessage } from '@infinite/shared/src/services/vocabulary';
 
 const PUZZLE_WIDTH_SCREEN_PERCENTAGE = 0.9;
 
@@ -112,6 +114,7 @@ const Game: FunctionComponent<{}> = () => {
             height
           }}
           onWin={(): void => {
+            goToScreen('KyudokuGameSuccess');
             loadInterstitial();
           }}
         />
@@ -133,9 +136,9 @@ const Game: FunctionComponent<{}> = () => {
             marginRight: 10
           }}
         >
-          Undo
+          {getMessage('gameUndo')}
         </Button>
-        <Button iconName="bulb-outline">Hint</Button>
+        <Button iconName="bulb-outline">{getMessage('gameHint')}</Button>
       </View>
       <View
         style={{
